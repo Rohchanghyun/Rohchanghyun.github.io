@@ -102,13 +102,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Roh chang hyun"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "Record my study"
+  location         : "Korea"
   email            :
   links:
-    - label: "Email"
+    - label: "ggara376@naver.com"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
     - label: "Website"
@@ -125,7 +125,7 @@ author:
       # url: "https://github.com/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://www.instagram.com/hyuun_e_/?hl=ko"
 
 # Site Footer
 footer:
