@@ -2,8 +2,8 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Posts"
-    url: /posts
+  - title: "Categories"
+    url: /categories
   - title: "tags"
     url: /tags/
   # - title: "Sitemap"
