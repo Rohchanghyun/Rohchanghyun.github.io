@@ -87,6 +87,7 @@ print ("Done.")
 # model 생성
 
 ### parameter 정의
+
 xdim,hdim,ydim 각각 정의
 >xdim = 1<br> hdim = [16,16]<br> ydim = 1<br>
 
@@ -95,13 +96,20 @@ xdim,hdim,ydim 각각 정의
 layers 라는 list 를 생성하여 linear 계층을 생성<br>
 Tanh 함수를 사용해 activation 뒤 마지막 layer에 linear 계층을 추가해준다<br>
 
+
 ### Concatenate all layers 
+
+
 여기서는 nn.Sequential을 사용하여 layer list 안에 있는 layer 들을 차례대로 실행시켜주도록 한다
 
+
 ### init params
+
+
 이 모델에서는 conv2d 를 사용하지 않았기 떄문에 conv2d 관련 param 은 초기화 되지 않지만 다른 계층을 사용할 시 param 초기화를 예시로 남겨두기 위해 지우지 않았다
 
 ### forward 
+
 train 동작
 
 
@@ -288,14 +296,14 @@ print ("Done.")
 adam 은 momentm, adaptive learning rate 합친것 -> 성능이 더 좋다
 그렇다면 sgd 와 momentum 이 왜 차이가 날까?
 
-### momentum
+**momentum**
 >momentum -> 이전의 gradient를 활용해서 다음에 쓰겠다<br>
 이전의 batch 에서 얻어진 gradient 정보를 반영해서 업데이트 해주기 때문에 **한번에 많이 보는 효과를 가져온다**
 
-### adam
+**adam**
 >adam은 momentum 에 adaptive learning rate 을 합치기 때문에 같은 base learning rate 가지고 있어도 훨씬 더 빠른 학습
 
-### sgd
+**sgd**
 >sgd만 가지고 하면 전체 data가 converge 할 때 까지 갈 수 있다<br>
 제일 큰 peak 만 잡는 이유는 squared loss 를 사용하게 되면 많이 틀리는 곳을 많이 맞추고 적게 틀리는 곳을 적게 맞추게 된다 <br>
 때문에 squared loss가 항상 좋은 결과를 가져오는것은 아니다 라는 것을 알 수 있다
