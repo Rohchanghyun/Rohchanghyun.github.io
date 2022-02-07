@@ -1,12 +1,3 @@
-<table class="tfo-notebook-buttons" align="left">
-  <td>
-    <a target="_blank" href="https://colab.research.google.com/github/sjchoi86/upstage-basic-deeplearning/blob/main/notebook/optm.ipynb"><img src="https://www.tensorflow.org/images/colab_logo_32px.png" />Colab</a>
-  </td>
-  <td>
-    <a target="_blank" href="https://github.com/sjchoi86/upstage-basic-deeplearning/blob/main/notebook/optm.ipynb"><img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />View Source</a>
-  </td>
-</table>
-
 # Regression with Different Optimizers
 
 
