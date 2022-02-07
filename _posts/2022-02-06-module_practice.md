@@ -17,7 +17,7 @@ last_modified_at: 2022-02-06
 # Tensor 초기화
 
 
-##텐서 생성
+## 텐서 생성
 
 **데이터로부터 텐서 생성**
 
@@ -112,10 +112,10 @@ x
 
 
 
-#텐서 연산
+# 텐서 연산
 
 
-##텐서 사칙연산
+## 텐서 사칙연산
 
 **텐서 사칙연산**
 
@@ -168,7 +168,7 @@ a + 7
 
 
 
-##텐서 인덱싱
+## 텐서 인덱싱
 
 - [torch.index_select - PyTorch 공식 문서](https://pytorch.org/docs/stable/generated/torch.index_select.html?highlight=index#torch.index_select)
 
@@ -210,7 +210,7 @@ output = torch.gather(A,0,torch.tensor([[0,1]]))
 
 # torch.nn
 
-##nn.Linear
+## nn.Linear
 
 nn.linear -> linear transform 구현
 
@@ -242,13 +242,13 @@ print(output.size())
     torch.Size([2, 5])
     
 
-#nn.Module
+# nn.Module
 
 - `nn.Module`이라는 상자에 `기능`들을 가득 모아놓은 경우 `basic building block`
 - `nn.Module`이라는 상자에 `basic building block`인 `nn.Module`들을 가득 모아놓은 경우 `딥러닝 모델`
 - `nn.Module`이라는 상자에 `딥러닝 모델`인 `nn.Module`들을 가득 모아놓은 경우 `더욱 큰 딥러닝 모델`
 
-pytorch 를 통한 신경망 모델 설계
+## pytorch 를 통한 신경망 모델 설계
 
 
 1.   Design yout model using class with variables
@@ -278,7 +278,7 @@ pytorch 의 nn 라이브러리는 모든 신경망 모델의 baseclass<br>
 
 
 
-##모델의 클래스를 통한 구현
+## 모델의 클래스를 통한 구현
 
 
 ```python
