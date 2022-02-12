@@ -5,14 +5,13 @@ excerpt: "nn.module class 를 통한 생성 공부"
 categories:
   - pytorch
 tags:
-  - nn.Module
-  - linearregression
+  - [nn.Module, linearregression]
 
 toc: true
 toc_sticky: true
  
-date: 2022-02-06
-last_modified_at: 2022-02-06
+date: 2022-02-13
+last_modified_at: 2022-02-13
 ---
 # Tensor 초기화
 
@@ -248,7 +247,7 @@ print(output.size())
 - `nn.Module`이라는 상자에 `basic building block`인 `nn.Module`들을 가득 모아놓은 경우 `딥러닝 모델`
 - `nn.Module`이라는 상자에 `딥러닝 모델`인 `nn.Module`들을 가득 모아놓은 경우 `더욱 큰 딥러닝 모델`
 
-## pytorch 를 통한 신경망 모델 설계
+pytorch 를 통한 신경망 모델 설계
 
 
 1.   Design yout model using class with variables
@@ -301,7 +300,175 @@ class LinearRegressionModel(nn.Module):
 model = LinearRegressionModel()
 ```
 
+x 로부터 예측된 y 를 얻는 것을 **forward 연산**이라고 한다
+
 
 ```python
+class MLP(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.linear = nn.Linear(3,1)
 
+    def forward(self,x):
+        return self.linear(x)
 ```
+
+## 단순 선형 회귀 클래스로 구현하기
+
+**nn.parameter**
+
+Tensor 객체의 상속 개체<br>
+nn.Module 내에 attribute 될때는 required_grad = True로 지정되어 학습 대상이 되는 tensor<br>
+def__init__ 의 in_features 객체에 들어가 있는 것이 weight 의 개수가 된다
+
+
+
+```python
+x_train = torch.FloatTensor([[1],[2],[3]])
+y_train = torch.FloatTensor([[2],[4],[6]])
+
+class LinearRegressionModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.linear = nn.Linear(1,1)
+
+    def forward(self,x):
+        return self.linear(x)
+```
+
+optimizer 설정 -> 경사하강법 sgd 를 사용하고 learning rate 는 0.01 로 설정
+
+
+```python
+model = LinearRegressionModel()
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+```
+
+nb_epochs : 반복 횟수 
+prediction 은 생성한 model 안에 train data 를 넣으면 나온다 
+
+mse.loss 는 pytorch 내에서 지원하는 평균 제곱 오차 함수<br>
+이걸 사용해 loss 함수를 구한 뒤에 loss 함수에 대해 backward 진행한다
+
+epoch 내의 기본적으로 있어야 하는 3가지
+1. optimizer.zero_grad() -> gradient 를 초기화 해준다 <br> 초기화 해주어야 grad가 쌓이지 않는다
+2. cost.backward() -> backward 연산
+3. optimizer.step() -> backward 연산으로 구한 grad 를 업데이트 해준다 
+
+
+
+```python
+nb_epochs = 200
+for epoch in range(nb_epochs+1):
+    prediction = model(x_train)
+
+    cost = F.mse_loss(prediction,y_train)
+
+    optimizer.zero_grad()
+
+    cost.backward()
+
+    optimizer.step()
+
+    if epoch % 10 == 0:
+        print('epoch {:4d}/{} cost: {:.6f}'.format(epoch,nb_epochs,cost.item()))
+```
+
+    epoch    0/200 cost: 28.346628
+    epoch   10/200 cost: 2.699617
+    epoch   20/200 cost: 0.257504
+    epoch   30/200 cost: 0.024947
+    epoch   40/200 cost: 0.002783
+    epoch   50/200 cost: 0.000653
+    epoch   60/200 cost: 0.000432
+    epoch   70/200 cost: 0.000394
+    epoch   80/200 cost: 0.000374
+    epoch   90/200 cost: 0.000356
+    epoch  100/200 cost: 0.000339
+    epoch  110/200 cost: 0.000323
+    epoch  120/200 cost: 0.000308
+    epoch  130/200 cost: 0.000294
+    epoch  140/200 cost: 0.000280
+    epoch  150/200 cost: 0.000267
+    epoch  160/200 cost: 0.000254
+    epoch  170/200 cost: 0.000242
+    epoch  180/200 cost: 0.000231
+    epoch  190/200 cost: 0.000220
+    epoch  200/200 cost: 0.000210
+    
+
+## 다중 선형 회귀 클래스로 구현하기 
+
+data
+
+
+```python
+x_train = torch.FloatTensor([[73, 80, 75],
+                             [93, 88, 93],
+                             [89, 91, 90],
+                             [96, 98, 100],
+                             [73, 66, 70]])
+y_train = torch.FloatTensor([[152], [185], [180], [196], [142]])
+```
+
+model 생성
+
+
+```python
+class MultivariateLinearRegressionModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.linear = nn.Linear(3,1)
+
+    def forward(self,x):
+        return self.linear(x)
+```
+
+model 선언 및 optimizer 설정
+
+
+```python
+model = MultivariateLinearRegressionModel()
+optimizer = torch.optim.SGD(model.parameters(),lr = 1e-5)
+```
+
+train
+
+
+```python
+nb_epochs = 200
+for epoch in range(nb_epochs + 1):
+
+    prediction = model(x_train)
+    cost = F.mse_loss(prediction,y_train)
+
+    optimizer.zero_grad()
+    cost.backward()
+    optimizer.step()
+
+    if epoch % 10 == 0:
+        print('epoch {:4d}/{} cost: {:.6f}'.format(epoch,nb_epochs,cost.item()))
+```
+
+    epoch    0/200 cost: 0.535162
+    epoch   10/200 cost: 0.534934
+    epoch   20/200 cost: 0.534713
+    epoch   30/200 cost: 0.534487
+    epoch   40/200 cost: 0.534268
+    epoch   50/200 cost: 0.534037
+    epoch   60/200 cost: 0.533809
+    epoch   70/200 cost: 0.533590
+    epoch   80/200 cost: 0.533369
+    epoch   90/200 cost: 0.533141
+    epoch  100/200 cost: 0.532918
+    epoch  110/200 cost: 0.532680
+    epoch  120/200 cost: 0.532469
+    epoch  130/200 cost: 0.532238
+    epoch  140/200 cost: 0.532019
+    epoch  150/200 cost: 0.531801
+    epoch  160/200 cost: 0.531575
+    epoch  170/200 cost: 0.531355
+    epoch  180/200 cost: 0.531141
+    epoch  190/200 cost: 0.530917
+    epoch  200/200 cost: 0.530699
+    
