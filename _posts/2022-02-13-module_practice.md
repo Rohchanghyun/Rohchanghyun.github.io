@@ -1,11 +1,12 @@
 ---
-title:  "[Pytorch] Module"
+title:  "[Pytorch] Module practice"
 excerpt: "nn.module class 를 통한 생성 공부"
 
 categories:
   - pytorch
 tags:
-  - [nn.Module, linearregression]
+  - nn.Module
+  - linearregression
 
 toc: true
 toc_sticky: true
