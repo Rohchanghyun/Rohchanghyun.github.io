@@ -1,12 +1,12 @@
 ---
-title:  "[Pytorch] Module practice"
-excerpt: "nn.module class 를 통한 생성 공부"
+title:  "[Pytorch] Module Practice"
+excerpt: "nn.module 을 통한 model class 생성 공부"
 
 categories:
   - pytorch
 tags:
-  - nn.Module
-  - linearregression
+  - nn.module
+  - LinearRegression
 
 toc: true
 toc_sticky: true
@@ -14,6 +14,7 @@ toc_sticky: true
 date: 2022-02-13
 last_modified_at: 2022-02-13
 ---
+
 # Tensor 초기화
 
 
