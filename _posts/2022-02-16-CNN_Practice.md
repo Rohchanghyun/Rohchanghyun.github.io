@@ -1,12 +1,13 @@
 ---
 title:  "[Pytorch] CNN Practice"
-excerpt: "Pytorch 를 통한 CNN model 구현"
+excerpt: "pytorch 를 통한 CNN model 구현"
 
 categories:
+  - practice
   - pytorch
 tags:
+  - pytorch
   - CNN
-  - CrossEntropyLoss
 
 toc: true
 toc_sticky: true
@@ -14,8 +15,6 @@ toc_sticky: true
 date: 2022-02-16
 last_modified_at: 2022-02-16
 ---
-
-
 # My CNN Model
 
 
