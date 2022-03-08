@@ -1,4 +1,5 @@
 ---
+published: true
 title:  "[Python] Data structure"
 excerpt: "Python 의 여러가지 자료형과 사용법 "
 
