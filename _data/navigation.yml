@@ -6,5 +6,5 @@ main:
     url: /categories
   - title: "tags"
     url: /tags/
-  - title: "Sitemap"
-    url: /sitemap/
+  #- title: "Sitemap"
+   # url: /sitemap/

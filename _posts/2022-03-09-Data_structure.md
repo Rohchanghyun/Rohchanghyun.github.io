@@ -17,8 +17,6 @@ date: 2022-03-09
 last_modified_at: 2022-03-09
 ---
 
-
-
 # 내장 자료구조
 
 ## tuple
