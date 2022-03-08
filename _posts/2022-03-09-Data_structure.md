@@ -1,20 +1,15 @@
 ---
 title:  "[Python] Data structure"
-excerpt: "python 의 여러가지 자료형과 사용법 "
+excerpt: "Python 의 여러가지 자료형과 사용법 "
 
 categories:
   - python
 tags:
-  - list
-  - dict
-  - set
   - data structure
 
 toc: true
 toc_sticky: true
 
-published: true
- 
 date: 2022-03-09
 last_modified_at: 2022-03-09
 ---
