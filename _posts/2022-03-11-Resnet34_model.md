@@ -2108,7 +2108,7 @@ plt.show()
 
 
     
-![png](resnet34_model_files/resnet34_model_47_0.png)
+![png](/assets/images/resnet34/train_graph.png)
     
 
 
@@ -2136,7 +2136,7 @@ plt.show()
 
 
     
-![png](resnet34_model_files/resnet34_model_48_0.png)
+![png](/assets/images/resnet34/val_graph.png)
     
 
 
