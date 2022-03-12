@@ -10,7 +10,8 @@ post.id %} {% assign title = post.title | markdownify | remove: "
       <span>
         <a
           href="{{ post.url }}"
-          
+          style="text-decoration:none"
+
           >{{post.title}}</a
         >
       </span>
@@ -29,5 +30,6 @@ post.id %} {% assign title = post.title | markdownify | remove: "
         
       </small>
     </div>
+    {% include page__meta.html type=include.type %} {% if post.excerpt %} {%endif %}
   </article>
 </div>
