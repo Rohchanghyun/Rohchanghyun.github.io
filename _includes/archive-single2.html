@@ -35,7 +35,8 @@ post.id %} {% assign title = post.title | markdownify | remove: "
         
         
       </small>
-      
+      {% include page__meta.html type=include.type %} {% if post.excerpt %} {%
+        endif %}
     </div>
-  </article style = “margin-bottom:20px”>
+  </article>
 </div>
