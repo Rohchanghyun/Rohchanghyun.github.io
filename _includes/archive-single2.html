@@ -10,25 +10,23 @@ post.id %} {% assign title = post.title | markdownify | remove: "
       <span>
         <a
           href="{{ post.url }}"
-          style="font-size: 18px; color: rgb(180, 50, 50); font-weight: 500"
+          
           >{{post.title}}</a
         >
       </span>
-      <small style="font-size: 18px; weight: bold">
+      <small>
         <i
           class="fas fa-fw fa-calendar-alt"
           aria-hidden="true"
-          style="font-size: 14px"
+          
         >
         </i>
 
-        <small style="font-size: 13px; weight: bold"
-          >{{ post.date | date: " %Y.%m.%d" }}
+        <small>
+          {{ post.date | date: " %Y.%m.%d" }}
         </small>
 
-        {% if site.category_archive.type and post.categories[0] and
-        site.tag_archive.type and post.tags[0] %} {%- include
-        post__taxonomy.html -%} {% endif %}
+        
       </small>
     </div>
   </article>
