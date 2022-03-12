@@ -2,6 +2,7 @@
 title: "Blog Description"
 permalink: /about/
 layout: single
+sidebar_main: true
 ---
 
 ## Rohchanghyun.github.io 블로그
