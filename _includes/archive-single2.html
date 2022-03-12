@@ -30,12 +30,12 @@ post.id %} {% assign title = post.title | markdownify | remove: "
 
         <small>
           {{ post.date | date: " %Y.%m.%d" }}
+          
         </small>
         
         
       </small>
       
     </div>
-    {% include page__meta.html type=include.type %} {% if post.excerpt %} {%endif %}
-  </article style=“margin-bottom:20px”>
+  </article style = “margin-bottom:20px”>
 </div>
