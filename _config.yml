@@ -285,6 +285,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      sidebar_main: true
       read_time: true
       comments: # true
       share: true

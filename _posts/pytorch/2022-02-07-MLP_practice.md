@@ -1,14 +1,18 @@
 ---
+layout: single
 title:  "[Pytorch] MLP Practice"
 excerpt: "Pytorch 를 통한 MLP 구현"
 
-categories:
-  - pytorch
-tags:
-  - MLP
+categories: pytorch
+  
+tags: [MLP]
 
 toc: true
 toc_sticky: true
+
+author_profile: true
+sidebar_main: true
+
  
 date: 2022-02-07
 last_modified_at: 2022-02-07
