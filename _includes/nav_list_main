@@ -23,14 +23,14 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Theory" %}
+                    {% if category[0] == "theory" %}
                         <li><a href="/categories/theory" class="">Theory ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Troubleshooting" %}
+                    {% if category[0] == "troubleshooting" %}
                         <li><a href="/categories/troubleshooting" class="">Troubleshooting ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
