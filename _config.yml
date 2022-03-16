@@ -301,5 +301,5 @@ defaults:
       read_time: false
       comments: false
       share: true
-      related: false
+      related: true
       sidebar_main: true
