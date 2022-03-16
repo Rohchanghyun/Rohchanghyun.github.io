@@ -1,4 +1,5 @@
 ---
+layout : single
 title:  "[Pytorch] Module Practice"
 excerpt: "nn.module 을 통한 model class 생성 공부"
 
@@ -10,6 +11,9 @@ tags:
 
 toc: true
 toc_sticky: true
+
+author_profile: true
+sidebar_main: true
  
 date: 2022-02-13
 last_modified_at: 2022-02-13

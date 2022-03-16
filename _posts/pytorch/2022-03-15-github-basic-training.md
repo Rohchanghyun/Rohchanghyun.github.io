@@ -1,4 +1,5 @@
 ---
+layout : single
 title:  "[Github] Git basic training"
 
 categories:
@@ -8,6 +9,9 @@ tags:
 
 toc: true
 toc_sticky: true
+
+author_profile: true
+sidebar_main: true
  
 date: 2022-03-15
 last_modified_at: 2022-03-15

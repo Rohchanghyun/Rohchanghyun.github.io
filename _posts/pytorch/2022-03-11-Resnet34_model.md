@@ -1,4 +1,5 @@
 ---
+layout : single
 title:  "[Pytorch] resnet34 model"
 excerpt: "pytorch 를 사용한 resnet 34 model 구현"
 
@@ -10,6 +11,9 @@ tags:
 
 toc: true
 toc_sticky: true
+
+author_profile: true
+sidebar_main: true
  
 date: 2022-03-11
 last_modified_at: 2022-03-11

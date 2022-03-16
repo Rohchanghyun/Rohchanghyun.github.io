@@ -1,4 +1,5 @@
 ---
+layout : single
 title:  "[Pytorch] Imagenet Practice"
 excerpt: "pre-trained ResNet34 를 통한 Imagenet의 데이터 훈련 "
 
@@ -11,6 +12,9 @@ tags:
 
 toc: true
 toc_sticky: true
+
+author_profile: true
+sidebar_main: true
  
 date: 2022-02-19
 last_modified_at: 2022-02-19

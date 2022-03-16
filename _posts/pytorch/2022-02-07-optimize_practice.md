@@ -1,4 +1,5 @@
 ---
+layout : single
 title:  "[Pytorch] Optimize Practice"
 excerpt: "Pytorch 를 통한 Optimize 구현 및 비교"
 
@@ -10,6 +11,9 @@ tags:
 
 toc: true
 toc_sticky: true
+
+author_profile: true
+sidebar_main: true
  
 date: 2022-02-07
 last_modified_at: 2022-02-07

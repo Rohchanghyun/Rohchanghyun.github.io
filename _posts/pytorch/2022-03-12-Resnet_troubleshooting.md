@@ -1,4 +1,5 @@
 ---
+layout : single
 title:  "[Troubleshooting] resnet34 model error handle"
 excerpt: "resnet34 구현 시 발생한 에러 처리"
 
@@ -10,6 +11,9 @@ tags:
 
 toc: true
 toc_sticky: true
+
+author_profile: true
+sidebar_main: true
  
 date: 2022-03-12
 last_modified_at: 2022-03-12

@@ -1,9 +1,9 @@
 ---
+layout : single
 title:  "[Pytorch] CNN Practice"
 excerpt: "pytorch 를 통한 CNN model 구현"
 
 categories:
-  - practice
   - pytorch
 tags:
   - pytorch
@@ -11,6 +11,9 @@ tags:
 
 toc: true
 toc_sticky: true
+
+author_profile: true
+sidebar_main: true
  
 date: 2022-02-16
 last_modified_at: 2022-02-16
