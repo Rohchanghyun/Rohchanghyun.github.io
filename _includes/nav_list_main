@@ -23,15 +23,15 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "theory" %}
-                        <li><a href="/categories/theory" class="">Theory ({{category[1].size}})</a></li>
+                    {% if category[0] == "Theory" %}
+                        <li><a href="/categories/Theory" class="">Theory ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "troubleshooting" %}
-                        <li><a href="/categories/troubleshooting" class="">Troubleshooting ({{category[1].size}})</a></li>
+                    {% if category[0] == "Troubleshooting" %}
+                        <li><a href="/categories/Troubleshooting" class="">Troubleshooting ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
