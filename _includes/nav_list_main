@@ -24,14 +24,14 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Theory" %}
-                        <li><a href="/categories/Theory" class="">Pytorch ({{category[1].size}})</a></li>
+                        <li><a href="/categories/theory" class="">Pytorch ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Troubleshooting" %}
-                        <li><a href="/categories/Troubleshooting" class="">Pytorch ({{category[1].size}})</a></li>
+                        <li><a href="/categories/troubleshooting" class="">Pytorch ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
