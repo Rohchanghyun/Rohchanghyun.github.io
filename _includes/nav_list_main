@@ -23,6 +23,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Paper" %}
+                        <li><a href="/categories/Paper" class="">Paper ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Theory" %}
                         <li><a href="/categories/Theory" class="">Theory ({{category[1].size}})</a></li>
                     {% endif %}
