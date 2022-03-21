@@ -19,7 +19,7 @@ last_modified_at: 2022-03-21
 
 ---
 
-# <span style="color: ##f0b752">Focal Loss for Dense Object Detection</span> 
+# <span style="color: #f0b752">Focal Loss for Dense Object Detection</span> 
 
 모델이 예측하기 어려운 hard example 를 집중적으로 다루는 <span style="color: #88c8ff">Focal Loss </span> 
 
