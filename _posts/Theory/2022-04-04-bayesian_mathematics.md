@@ -38,7 +38,7 @@ last_modified_at: 2022-04-04
 
 <p align="center"><img src="/assets/images/bayesian/problem.png"></p>
 
-<details> <summary><span style="color: #ffffff">Answer</span></summary> <div markdown="1"><p align="center"><img src="/assets/images/bayesian/problem.png"></p></div> </details>
+<details> <summary><span style="color: #ffffff">Answer</span></summary> <div markdown="1"><p align="center"><img src="/assets/images/bayesian/answer.png"></p></div> </details>
 
 ### <span style="color: #b1cf89">조건부 확률의 시각화</span>
 
