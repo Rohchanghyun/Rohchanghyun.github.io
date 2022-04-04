@@ -1,6 +1,7 @@
+---
 layout : single
-title:  "[Theory] Semantic Segmantation and Detection "
-excerpt: "R-CNN 및 여러가지 detection"
+title:  "[Theory] Bayesian mathematics "
+excerpt: "Bayesian mathematics 정리"
 
 categories:
   - Theory
@@ -12,9 +13,10 @@ toc_sticky: true
 
 author_profile: true
 sidebar_main: true
- 
+
 date: 2022-04-04
 last_modified_at: 2022-04-04
+---
 
 # <span style="color: #f0b752">Bayesian statistics</span>
 
@@ -42,11 +44,13 @@ last_modified_at: 2022-04-04
 
 <p align="center"><img src="/assets/images/bayesian/visual.png"></p>
 
+<p align="center"><img src="/assets/images/bayesian/excel.png"></p>
+
 ### <span style="color: #b1cf89">베이즈 정리를 통한 정보의 갱신</span>
 
 <p align="center"><img src="/assets/images/bayesian/update.png"></p>
 
 - 갱신된 사후확률을 구하기 위해 이전 사후확률을 P(θ)에 대입한다.
-- 이때 evidence도 갱신해주어야 한다
+- 이때 <span style="color: #88c8ff">evidence</span>도 갱신해주어야 한다
 
 <p align="center"><img src="/assets/images/bayesian/update2.png"></p>
