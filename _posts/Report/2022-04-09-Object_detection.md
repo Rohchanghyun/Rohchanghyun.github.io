@@ -58,8 +58,9 @@ test result : wandb
 #### <span style="color: #b1cf89">더 확인했으면 좋았을 내용</span>
 
 - <span style="color: #ed6663">bbox 크기에 따른 분류</span> 
+	
 	크기가 작은 물체를 찾아내는 것이 어려웠기 때문에, bbox 의 크기별로 분류하여 data augment 시에 어떠한 것에 더 초점을 두어야 할지 알아낼 수 있었을 것이라고 생각했다
-
+	
 - <span style="color: #ed6663">K-fold 의 정확한 사용법</span>
 
 	fold 를 5개로 나누어 사용하였는데, K-fold 부분을 다시 공부해 보니 <span style="color: #88c8ff">원래의 목적은 여러개의 fold 를 만들어 model을 학습시킨 뒤에 최적의 hyper parameter 를 찾아내고, 큰 dataset 에서 학습을 하는 것이 목적</span>이라고 한다. 하지만 나는 단순히 여러 fold 에서 model 을 학습시킨 뒤 ensemble 만 하여 제대로 된 K-fold 를 사용하지 못했다고 생각했다 
