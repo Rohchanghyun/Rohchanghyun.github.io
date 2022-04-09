@@ -23,7 +23,9 @@ last_modified_at: 2022-04-09
 # <span style="color: #f0b752">Object detection 개인 회고록</span>
 ## <span style="color: #a6acec">Object detection competition 소개</span>
 competition 기간 : 2022.03.21 1 2022.04.07
+
 competition 내용 : 주어진 dataset 에서 쓰레기를 찾아내어 해당 쓰레기의 종류를 찾아내는 task
+
 팀원: CV-12조 (노창현,김승현,최홍록,최진아,최용원)
 
 ## <span style="color: #a6acec">test 환경</span>
@@ -40,7 +42,9 @@ test result : wandb
 
 ## <span style="color: #a6acec">competition 진행 내용 정리</span>
 ### <span style="color: #88c8ff">data EDA</span>
-저번 대회에서도 느꼈지만 data에 대한 제대로된 이해가 필요하다고 생각했다. 전체적인 class 비율 파악, ground truth bbox 를 출력하여 bbox가 사진 하나에 얼마나 형성되어있는지 를 확인하였다.
+저번 대회에서도 느꼈지만 data에 대한 제대로된 이해가 필요하다고 생각했다
+
+전체적인 class 비율 파악, ground truth bbox 를 출력하여 bbox가 사진 하나에 얼마나 형성되어있는지 를 확인하였다
 
 - class 별 분포
 
@@ -215,10 +219,10 @@ cross validation을 포함한 model을 학습시키며 performance가 잘  나�
 
 **<span style="color: #ed6663">htc_swin_l</span>**(data augmentation add)
 
-| fold | Backbone | epoch |   lr   | mAP_50 |
-| :--: | :------: | :---: | :----: | :----: |
-|  3   | resnet50 |  24   | 0.0001 |  0.52  |
-|  3   |  Swin_L  |  24   | 0.0001 | 0.647  |
+| fold | Backbone | epoch |   lr   | <span style="color: #88c8ff">mAP_50</span> |
+| :--: | :------: | :---: | :----: | :----------------------------------------: |
+|  3   | resnet50 |  24   | 0.0001 |                    0.52                    |
+|  3   |  Swin_L  |  24   | 0.0001 |                   0.647                    |
 
 **<span style="color: #ed6663">cascade_rcnn</span>**
 
