@@ -4,7 +4,7 @@ title:  "[2022 KAKAO BLIND RECRUITMENT] 신고결과받기"
 excerpt: "신고 결과 받기 문제풀이 및 회고"
 
 categories:
-  - Programmers[Python]
+  - Programmers_Python
 tags:
   - Programmers
   - Python
