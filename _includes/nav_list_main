@@ -65,6 +65,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "BAEKJOON_Python" %}
+                        <li><a href="/categories/BAEKJOON_Python" class="">BAEKJOON[Python] ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <span class="nav__sub-title">Github</span>
             <ul>
                 {% for category in site.categories %}
