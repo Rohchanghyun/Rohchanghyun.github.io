@@ -4,9 +4,11 @@ title:  "[Theory] Matplotlib"
 excerpt: "Matplotlib"
 
 categories:
-  - Python
+  - Theory
 tags:
-  - Python
+  - Theory
+  - Matplotlib
+
 
 toc: true
 toc_sticky: true
