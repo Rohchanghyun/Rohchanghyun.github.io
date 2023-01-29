@@ -442,6 +442,8 @@ print ("Done")
 
 ```
 
+<p align="center"><img src="/assets/images/Pytorch/cnn/figure_1.png"></p>
+
 <pre>
 <Figure size 720x720 with 25 Axes>
 </pre>
