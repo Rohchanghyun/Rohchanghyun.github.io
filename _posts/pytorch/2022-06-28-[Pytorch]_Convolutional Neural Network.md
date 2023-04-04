@@ -4,9 +4,9 @@ title:  "[Pytorch] Convolutional Neural Network"
 excerpt: "CNN 구현"
 
 categories:
-  - Pytorch
+  - pytorch
 tags:
-  - Pytorch
+  - pytorch
   - CNN
 
 toc: true

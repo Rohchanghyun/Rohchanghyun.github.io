@@ -1,12 +1,12 @@
 ---
 layout : single
-title:  "[Pytorch]ViT code 공부"
+title:  "[Pytorch] ViT code 공부"
 excerpt: "ViT code 보며 구현"
 
 categories:
-  - Pytorch
+  - pytorch
 tags:
-  - Pytorch
+  - pytorch
   - transformer
 
 toc: true
