@@ -4,9 +4,9 @@ title:  "[Pytorch]ViT code 공부"
 excerpt: "ViT code 보며 구현"
 
 categories:
-  - PyTorch
+  - Pytorch
 tags:
-  - PyTorch
+  - Pytorch
   - transformer
 
 toc: true
