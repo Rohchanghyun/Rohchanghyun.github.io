@@ -13,13 +13,13 @@ $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
 /* system typefaces */
-$serif: Georgia, Times, serif, "Malgun Gothic" !default;
+$serif: Georgia, Times, serif, "Nanum Gothic" !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-  "Helvetica Neue", "Lucida Grande", Arial, sans-serif, "Malgun Gothic"!default;
-$monospace: Monaco, Consolas, "Lucida Console", monospace,"Malgun Gothic"  !default;
+  "Helvetica Neue", "Lucida Grande", Arial, sans-serif, "Nanum Gothic"!default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace, "Nanum Gothic"  !default;
 
 /* sans serif typefaces */
-$sans-serif-narrow: $sans-serif !default;
+$sans-serif-narrow: $sans-serif, "Nanum Gothic" !default;
 $helvetica: Helvetica, "Helvetica Neue", Arial, sans-serif !default;
 
 /* serif typefaces */
