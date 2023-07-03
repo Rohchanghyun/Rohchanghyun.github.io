@@ -155,6 +155,7 @@ kbd,
 samp,
 pre {
   font-family: "consolas",monospace,"Malgun Gothic";
+  background: #171621;
 }
 
 pre {
@@ -168,7 +169,7 @@ figcaption > code,
 td > code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  font-size: 1.2em;
+  font-size: 1.7em;
   font-family: $serif;
   background: #171621;
   border-radius: $border-radius;
