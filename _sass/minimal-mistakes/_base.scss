@@ -29,7 +29,7 @@ h5,
 h6 {
   margin: 2em 0 0.5em;
   line-height: 1.2;
-  font-family: $header-font-family;
+  font-family: "consolas",monospace,"Malgun Gothic";
   font-weight: bold;
 }
 
@@ -170,8 +170,7 @@ td > code {
   padding-bottom: 0.1rem;
   font-size: 1.2em;
   font-family: $serif;
-  color : #171621;
-  background: $code-background-color;
+  background: #171621;
   border-radius: $border-radius;
 
   &:before,

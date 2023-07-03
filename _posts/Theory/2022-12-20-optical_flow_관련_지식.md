@@ -36,7 +36,6 @@ date: 2022-12-20
 last_modified_at: 2022-12-20
 
 ---
-# optical flow 관련 지식
 
   
 

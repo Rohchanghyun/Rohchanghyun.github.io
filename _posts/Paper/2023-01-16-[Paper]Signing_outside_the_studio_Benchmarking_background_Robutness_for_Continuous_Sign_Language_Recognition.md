@@ -9,8 +9,7 @@ excerpt: "Signing outside the studio : Benchmarking background Robutness for Con
 
 
 categories:
-
-- Paper
+    - Paper
 
 tags:
 
