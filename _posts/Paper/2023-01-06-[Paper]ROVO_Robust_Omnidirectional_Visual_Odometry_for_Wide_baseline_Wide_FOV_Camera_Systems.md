@@ -4,7 +4,7 @@ layout : single
 
 title: "[Paper]ROVO: Robust Omnidirectional Visual Odometry for Wide-baseline Wide-FOV Camera Systems"
 
-excerpt: "DROVO: Robust Omnidirectional Visual Odometry for Wide-baseline Wide-FOV Camera Systems 논문 리뷰"
+excerpt: "ROVO: Robust Omnidirectional Visual Odometry for Wide-baseline Wide-FOV Camera Systems 논문 리뷰"
 
 
 
@@ -14,6 +14,7 @@ categories:
 
 tags:
 
+- ROVO
 
 
 

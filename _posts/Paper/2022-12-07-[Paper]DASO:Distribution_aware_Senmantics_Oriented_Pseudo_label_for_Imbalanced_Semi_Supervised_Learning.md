@@ -14,6 +14,7 @@ categories:
 
 tags:
 
+- Semi-supervised
 
 
 
