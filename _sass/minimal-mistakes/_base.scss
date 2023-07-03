@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   color: $text-color;
-  font-family: "consolas",monospace, "Nanum Gothic";
+  font-family: "consolas","Nanum Gothic",monospace;
   line-height: 1.5;
 
   &.overflow--hidden {
@@ -29,7 +29,7 @@ h5,
 h6 {
   margin: 2em 0 0.5em;
   line-height: 1.2;
-  font-family: "consolas",monospace, "Nanum Gothic";
+  font-family: "consolas","Nanum Gothic",monospace;
   font-weight: bold;
 }
 
@@ -154,7 +154,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: "consolas",monospace, "Nanum Gothic";
+  font-family: "consolas","Nanum Gothic",monospace;
+  font-size: 1.4em;
   background: #394867;
 }
 
@@ -169,7 +170,7 @@ figcaption > code,
 td > code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
-  font-size: 1.7em;
+  font-size: 1.4em;
   font-family: $serif;
   background: #171621;
   border-radius: $border-radius;
@@ -320,11 +321,13 @@ nav {
   /* override white-space for nested lists */
   ul li,
   ol li {
+    font-family: "consolas","Nanum Gothic",monospace;
     margin-bottom: 0;
   }
 
   li ul,
   li ol {
+    font-family: "consolas","Nanum Gothic",monospace;
     margin-top: 0;
   }
 }
