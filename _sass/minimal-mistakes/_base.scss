@@ -13,7 +13,6 @@ body {
   padding: 0;
   color: $text-color;
   font-family: "consolas",'Pretendard-Regular',monospace;
-  line-height: 1.5;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -155,7 +154,7 @@ kbd,
 samp,
 pre {
   font-family: "consolas",'Pretendard-Regular',monospace;
-  font-size: 1.5em;
+  font-size: 1.0em;
   background: #394867;
 }
 
