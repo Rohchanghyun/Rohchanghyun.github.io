@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
   color: $text-color;
-  font-family: "consolas","Nanum Gothic",monospace;
+  font-family: "consolas",'Pretendard-Regular',monospace;
   line-height: 1.5;
 
   &.overflow--hidden {
@@ -29,7 +29,7 @@ h5,
 h6 {
   margin: 2em 0 0.5em;
   line-height: 1.2;
-  font-family: "consolas","Nanum Gothic",monospace;
+  font-family: "consolas",'Pretendard-Regular',monospace;
   font-weight: bold;
 }
 
@@ -154,8 +154,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: "consolas","Nanum Gothic",monospace;
-  font-size: 1.4em;
+  font-family: "consolas",'Pretendard-Regular',monospace;
+  font-size: 1.5em;
   background: #394867;
 }
 
@@ -321,13 +321,13 @@ nav {
   /* override white-space for nested lists */
   ul li,
   ol li {
-    font-family: "consolas","Nanum Gothic",monospace;
+    font-family: "consolas",'Pretendard-Regular',monospace;
     margin-bottom: 0;
   }
 
   li ul,
   li ol {
-    font-family: "consolas","Nanum Gothic",monospace;
+    font-family: "consolas",'Pretendard-Regular',monospace;
     margin-top: 0;
   }
 }
