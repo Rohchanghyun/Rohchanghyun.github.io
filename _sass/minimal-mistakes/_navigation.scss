@@ -12,7 +12,7 @@
   max-width: 100%;
   padding-left: 1em;
   padding-right: 1em;
-  font-family: $sans-serif;
+  font-family: $sans-serif,"Malgun Gothic";
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.3s;
@@ -483,7 +483,8 @@
 .nav__title {
   margin: 0;
   padding: 0.5rem 0.75rem;
-  font-family: $sans-serif-narrow;
+  font-family: "consolas",monospace,"Malgun Gothic";
+  background: #acb1d6;
   font-size: $type-size-5;
   font-weight: bold;
 }
