@@ -7,7 +7,6 @@ categories:
   - Python
 tags:
   - Iterator
-  - Python
 
 toc: true
 toc_sticky: true

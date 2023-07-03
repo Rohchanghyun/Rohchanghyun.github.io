@@ -5,7 +5,6 @@ title:  "[Github] Git basic training"
 categories:
   - Git
 tags:
-  - Git
 
 toc: true
 toc_sticky: true
@@ -16,9 +15,6 @@ sidebar_main: true
 date: 2022-03-15
 last_modified_at: 2022-03-15
 ---
-
-
-# Git
 
 git 의 기초 사용 방법
 

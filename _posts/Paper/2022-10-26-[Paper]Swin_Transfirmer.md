@@ -14,8 +14,6 @@ categories:
 
 tags:
 
-- Paper
-
 - transformer
 
 
@@ -37,8 +35,6 @@ date: 2022-10-26
 last_modified_at: 2022-10-26
 
 ---
-
-# Swin Transformer
 
 ## Abstract
 

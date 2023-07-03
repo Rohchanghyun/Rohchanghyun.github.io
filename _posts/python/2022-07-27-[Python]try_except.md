@@ -7,7 +7,6 @@ categories:
   - Python
 tags:
   - error
-  - Python
 
 toc: true
 toc_sticky: true

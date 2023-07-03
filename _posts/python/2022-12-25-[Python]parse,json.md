@@ -14,7 +14,6 @@ categories:
 
 tags:
 
-- Python
 - parse
 - json
 
@@ -38,8 +37,6 @@ date: 2022-12-25
 last_modified_at: 2022-12-25
 
 ---
-# parse,json
-
   
 
 ## json : Java script Object Notation

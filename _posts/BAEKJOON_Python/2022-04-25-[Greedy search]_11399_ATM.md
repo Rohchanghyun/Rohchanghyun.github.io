@@ -6,7 +6,6 @@ excerpt: "ATM 문제풀이 및 회고"
 categories:
   - BAEKJOON_Python
 tags:
-  - BAEKJOON
   - Python
 
 toc: true
@@ -19,7 +18,6 @@ date: 2022-04-25
 last_modified_at: 2022-04-25
 ---
 
-# <span style="color: #f0b752">ATM</span>
 
 ## <span style="color: #a6acec">내 풀이</span>
 

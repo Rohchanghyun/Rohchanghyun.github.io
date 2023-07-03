@@ -6,7 +6,6 @@ excerpt: "Monitoring"
 categories:
   - Theory
 tags:
-  - Theory
   - Monitoring
 
 

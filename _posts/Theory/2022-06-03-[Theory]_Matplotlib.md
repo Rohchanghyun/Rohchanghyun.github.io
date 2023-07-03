@@ -6,7 +6,6 @@ excerpt: "Matplotlib"
 categories:
   - Theory
 tags:
-  - Theory
   - Matplotlib
 
 

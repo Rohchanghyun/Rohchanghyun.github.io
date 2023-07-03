@@ -6,7 +6,6 @@ excerpt: "transformer 논문 review"
 categories:
   - Paper
 tags:
-  - Paper
   - transformer
 
 toc: true

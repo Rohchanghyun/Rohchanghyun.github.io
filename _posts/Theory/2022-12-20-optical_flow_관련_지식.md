@@ -14,7 +14,6 @@ categories:
 
 tags:
 
-- Theory
 - optical flow
 
 

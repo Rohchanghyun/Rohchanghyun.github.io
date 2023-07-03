@@ -7,7 +7,6 @@ categories:
   - Python
 tags:
   - class
-  - Python
 
 toc: true
 toc_sticky: true

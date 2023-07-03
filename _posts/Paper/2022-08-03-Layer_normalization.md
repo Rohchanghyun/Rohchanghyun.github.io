@@ -14,8 +14,6 @@ categories:
 
 tags:
 
- - Paper
-
  - Normalization
 
 
@@ -37,10 +35,6 @@ date: 2022-08-03
 last_modified_at: 2022-08-03
 
 ---
-
-
-
-# Layer Normalization
 
 ## Abstract & Introduction
 

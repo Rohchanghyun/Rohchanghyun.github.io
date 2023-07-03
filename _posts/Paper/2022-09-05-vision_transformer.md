@@ -14,8 +14,6 @@ categories:
 
 tags:
 
-- Paper
-
 - transformer
 
 
@@ -37,10 +35,6 @@ date: 2022-09-05
 last_modified_at: 2022-09-05
 
 ---
-
-
-
-# Vision Transformer
 
 ## Abstract
 

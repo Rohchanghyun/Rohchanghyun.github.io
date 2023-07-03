@@ -14,8 +14,6 @@ categories:
 
 tags:
 
-- Paper
-
 
 
 
@@ -36,8 +34,6 @@ date: 2023-01-06
 last_modified_at: 2023-01-06
 
 ---
-# ROVO: Robust Omnidirectional Visual Odometry for Wide-baseline Wide-FOV Camera Systems
-
   
 
 ## abstract

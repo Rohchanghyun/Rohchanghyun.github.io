@@ -14,8 +14,6 @@ categories:
 
 tags:
 
-- Paper
-
 
 
 
@@ -36,17 +34,16 @@ date: 2023-01-11
 last_modified_at: 2023-01-11
 
 ---
-## Self-Sufficient Framework for Continuous sign language recognition
 
   
 
-- > Abstract  
+## Abstract  
     - 수화 인식의 주요 문제를 해결하는 CSLR을 위한 자급자족 프레임워크를 개발하는것이 목표
     - 손,얼굴 및 입과 같은 복잡한 다중 스케일 기능의 필요성과 프레임 수준 주석의 부재가 포함된다.
         - 추가 네트워크나 annotation없이 manual or non-manual feature를 모두 추출하는 분할 및 초점 convolution 제안
         - 실제 gloss 시퀀스 레이블을 예측 시퀀스와 결합하여 non-spiky한 프레임 수준의 유사 레이블을 전파하는 DPLR 제안
 
-- > Introduction  
+## Introduction  
     - CSLR작업은 수화 비디오에서 gloss1 시퀀스를 인식하는 것을 목표로 한다.
     - 표현의 의미를 포착하기 위해, RGB depth, 적외선 지도 및 optical flow와 같은 다른 양식과 융합하거나 기성 검출기를 사용하여 다중 큐 feature 또는 human keypoint를 명시적으로 추출하여 manual or non-manual feature를 얻는다.
     - 이러한 추가 구성 요소를 사용하면 training 과 추론 프로세스에서 병목현상 발생
@@ -61,18 +58,18 @@ last_modified_at: 2023-01-11
     - DPLR
         - 지상 실측 gloss를 참조하여 초기에 예측된 gloss 시퀀스를 모델에서 정교하게 다듬고 추가 네트워크 없이 프레임 수준 gloss 감독을 전파
 
-- > Method  
+## Method  
     - CSLR task : 주어진 입력 비디오를 n개의 gloss를 해당 gloss 시퀀스에 매핑하는것을 목표로 한다.
     - 비디오는 feature를 추출하기 위해 여러 DFConv 계층과 다중 큐 임베딩 계층으로 구성된 공간 모델링 모듈에 공급된다.
     - 모든 프레임의 멀티큐 기능은 인접한 프레임 간에 더 중요한 정보를 캡처하는 병목 기반 시간 주의와 TMC블록으로 구성된 시간 모델링 모듈을 통해 전달된다.
     - 그 다음 마지막 TMC블록의 출력은 최종 모델 출력에서 gloss 시퀀스를 예측하기 위해 Bi-LSTM 계층과 FC 게층으로 구성된 시퀀스 학습 단계를 통과.
     - 마지막으로 고밀도의 프레임 수준 유사 레이블을 생성하여 잠재 표현을 효과적으로 훈련하기 위해 DPLR 모듈이 도입되었다.
-    - > Divide and Focus Convolution  
+    -  Divide and Focus Convolution  
         - non-manual 표현이 CSLR 데이터 세트의 상위 영역에서 자주 발생하는 것을 관찰
         - 표현식은 주로 하위 영역에서 발생
         - 2d 컨볼루션 레이어는 전체 이미지에 대해 가장 지배적인 하나의 정보만을 캠처하는 경향이 있다.
         - 이를 해결하기 위해 RGB 모달리티에서만 non-manual feature와 manual feature를 독립적으로 캡처하도록 설계된 새로운 분할 및 초점 컨벌루션 계층 제안(DFConv)
-    - > Dense Pseudo-Label Refinement  
+    -  Dense Pseudo-Label Refinement  
         - 대부분의 기존 수화 데이터 세트에는 시간적으로 지역화된 gloss 레이블이 없다.
         - CSLR 모델은 각 gloss token에 대해 직접적이고 정확한 정렬 감독을 받기 어렵다.
         - 이는 전체 시퀀스에 의존하기 때문에 모델의 견고성을 심각하게 제한. -> 유사한 시퀀스와 약간 다른 단어를 쉽게 혼동할 수 있다.

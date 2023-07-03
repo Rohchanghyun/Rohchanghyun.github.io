@@ -7,7 +7,6 @@ categories:
   - Python
 tags:
   - search
-  - Python
 
 toc: true
 toc_sticky: true

@@ -7,7 +7,6 @@ categories:
   - Troubleshooting
 tags:
   - resnet34
-  - error
 
 toc: true
 toc_sticky: true

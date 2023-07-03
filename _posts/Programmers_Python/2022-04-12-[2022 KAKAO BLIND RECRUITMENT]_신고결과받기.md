@@ -6,7 +6,6 @@ excerpt: "신고 결과 받기 문제풀이 및 회고"
 categories:
   - Programmers_Python
 tags:
-  - Programmers
   - Python
 
 toc: true

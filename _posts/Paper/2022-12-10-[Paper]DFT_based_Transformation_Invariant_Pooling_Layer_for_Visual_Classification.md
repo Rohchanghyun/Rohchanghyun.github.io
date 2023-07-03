@@ -14,8 +14,6 @@ categories:
 
 tags:
 
-- Paper
-
 
 
 
@@ -36,9 +34,6 @@ date: 2022-12-10
 last_modified_at: 2022-12-10
 
 ---
-# DFT-based Transformation Invariant Pooling Layer for Visual Classification
-
-  
 
 ## abstract
 

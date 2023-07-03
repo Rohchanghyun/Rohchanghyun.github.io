@@ -7,7 +7,6 @@ categories:
   - Python
 tags:
   - comprehension
-  - Python
 
 toc: true
 toc_sticky: true

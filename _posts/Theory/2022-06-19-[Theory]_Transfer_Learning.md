@@ -6,7 +6,6 @@ excerpt: "Transfer Learning"
 categories:
   - Theory
 tags:
-  - Theory
   - Transfer Learning
 
 

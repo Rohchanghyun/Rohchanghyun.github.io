@@ -6,7 +6,6 @@ excerpt: "Autograd"
 categories:
   - Theory
 tags:
-  - Theory
   - Autograd
 
 

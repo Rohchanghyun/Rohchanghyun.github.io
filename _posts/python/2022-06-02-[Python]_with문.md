@@ -6,7 +6,6 @@ excerpt: "with문 사용법"
 categories:
   - Python
 tags:
-  - Python
 
 toc: true
 toc_sticky: true

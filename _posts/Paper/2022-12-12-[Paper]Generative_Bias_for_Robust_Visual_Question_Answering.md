@@ -14,8 +14,6 @@ categories:
 
 tags:
 
-- Paper
-
 
 
 
@@ -36,16 +34,15 @@ date: 2022-12-12
 last_modified_at: 2022-12-12
 
 ---
-## Generative Bias for Robust Visual Question Answering
 
-- > Abstract  
+## Abstract  
     - VQA작업은 최종 예측을 위해 데이터 세트 내의 bias를 사용하는 문제로 인해 어려움이 있다.
     - 이를 위해 모델이 의도적으로 biased되도록 훈련하는 앙상블 기반 debias기법이 제안되었었다.
         - 하지만 이는 훈련 데이터의 레이블 통계 또는 단일 모달 분기에서 모델에 대한 bias 계산.
     - 해당 논문에서는 Generative bias라고 하는 대상 모델에서 직접 편향 모델을 훈련시키는 생성 방법을 제안
         - 이는 adversarial objective 와 knowledge distillation을 조합하여 대상 모델의 bias를 학습하기 위해 generative network를 사용한다.
 
-- > Introduction  
+## Introduction  
     - VQA : 입력된 이미지와 질문 쌍이 주어진 답변을 올바르게 이해하고 예측해야 하는 까다로은 멀티모달 task
     - 많은 연구에서 VQA는 데이터 세트 내에서 편향되기 쉽고 데이터 세트 내에 존재하는 언어 bias에 크게 의존.
     - 이에 대응하여 최근의 연구들은 다양한 debiasing 기법 개발(ex 앙상블 기반 debiasing)
@@ -63,21 +60,21 @@ last_modified_at: 2022-12-12
     - 앙상블 기반 편향 제거를 위한 새로운 편향 모델 제안
     - GAN 과 knowledge distillation 사용
     - updn 기준선 사용
-- > Methodology  
-    - > VIsual Question Answering Baseline  
+### Methodology  
+    -  VIsual Question Answering Baseline  
         - 이미지와 질문을 입력 쌍으로 사용하여 전체 답변 집합 A에서 정답을 정확하게 예측하는 방법을 학습
         - 이 연구에서 우리는 VQA 편향 제거 연구에서 널리 사용되는 UpDn중 하나를 채택
-    - > Ensembling with Bias Models  
+    -  Ensembling with Bias Models  
         - 기존 바이어스 모델의 목표 : 최대한 바이어스에 과적합
         - 과적합한 바이어스 모델이 주어지면 편향 손실 함수로 대상 모델을 훈련(대상 모델: 훈련 시키려는 모델)
         - 결과적으로 대상 모델은 바이어스 모델에서 편향된 답변을 피함으로써 편향되지 않은 답변을 예측하는 방법을 배운다.
         - 앞서 있었던 연구들이 개별 양식의 바이어스를 활용하려고 하지만, 이것이 바이어스를 나타내는 모델의 능력을 제한할 것이라고 생각.
         - 따라서 대상 모델과 유사한 편향을 나타내기 위해 구조를 동일하게 설정하고 UpDn 모델을 사용
-    - > Generative Bias  
+    -  Generative Bias  
         - 확률적 편향 표현을 생성할 수 있는 바이어스 모델을 훈련시기키 위해 무작위 노이즈 벡터를 활용하여 대상 모델이 나타낼 수 있는 데이터 세트 편향과 편향을 모두 학습
         - 질문이 편향되기 쉽기 때문에 질문 양식을 유지하고 편향 모델에 대한 입력으로 사용
         - 이미지 기능도 사용하기 때문에 무작위 노이즈 도입
-    - > Training the bias model  
+    -  Training the bias model  
         - 편향 모델 genB가 편향을 학습하기 위해 VQA loss 사용(Binary Cross Entropy Loss)
         - 편향 모델이 대상 모델의 편향도 포착하기를 원한다.
         - 대상 모델의 편향을 답변의 무작위 분포로 모방하기 위해 adversarial training을 제안하여 편향 모델을 훈련
@@ -85,4 +82,4 @@ last_modified_at: 2022-12-12
         - 생성자는 real/fake 구분하기 어렵게 생성
         - 생성자,판별자의 훈련을 위해 편향 모델의 답변 벡터 분포는 목표 모델의 분포에 가까워야 한다
         - 편향 모델을 더욱 강화하기 위해 유사한 지식 증류 목표를 추가하여 모델 편향 모델이 q만 주어진 대상 모델의 동작을 따를 수 있도록 한다.
-    - > Debiasing the Target Model
+    -  Debiasing the Target Model

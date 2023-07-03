@@ -6,7 +6,6 @@ excerpt: "Dataloader and dataset"
 categories:
   - Theory
 tags:
-  - Theory
   - Dataloader
   - dataset
 

@@ -6,7 +6,6 @@ excerpt: "ViT code 보며 구현"
 categories:
   - pytorch
 tags:
-  - pytorch
   - transformer
 
 toc: true

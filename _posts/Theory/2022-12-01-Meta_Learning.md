@@ -6,7 +6,6 @@ excerpt: "Meta Learning 공부"
 categories:
   - Theory
 tags:
-  - Theory
   - Meta Learning
 
 toc: true

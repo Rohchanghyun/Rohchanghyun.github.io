@@ -5,7 +5,7 @@ excerpt: "Pytorch 를 통한 MLP 구현"
 
 categories: pytorch
   
-tags: [MLP]
+tags: MLP
 
 toc: true
 toc_sticky: true

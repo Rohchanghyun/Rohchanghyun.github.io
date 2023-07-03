@@ -6,7 +6,6 @@ excerpt: "pytorch 를 통한 CNN model 구현"
 categories:
   - pytorch
 tags:
-  - pytorch
   - CNN
 
 toc: true
