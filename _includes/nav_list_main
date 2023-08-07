@@ -60,7 +60,7 @@
         <span class="nav__sub-title">Algorithm</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Leetcode_Python" %}ß
+                    {% if category[0] == "Leetcode_Python" %}
                         <li><a href="/categories/Leetcode_Python" class="">Leetcode[Python] ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
