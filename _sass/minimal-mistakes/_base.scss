@@ -154,6 +154,7 @@ kbd,
 samp,
 pre {
   padding-top: 0.2rem;
+  padding-left: 0.3rem;
   padding-bottom: 0.2rem;
   font-family: "consolas",'Pretendard-Regular',monospace;
   font-size: 1.1em;
@@ -163,6 +164,13 @@ pre {
 
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
+  padding-top: 0.2rem;
+  padding-left: 0.3rem;
+  padding-bottom: 0.2rem;
+  font-family: "consolas",'Pretendard-Regular',monospace;
+  font-size: 1.1em;
+  background: #2b2b2e;
+  border-radius: $border-radius;
 }
 
 p > code,
