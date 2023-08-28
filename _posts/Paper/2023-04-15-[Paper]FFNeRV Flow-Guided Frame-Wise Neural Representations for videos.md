@@ -33,7 +33,7 @@ last_modified_at: 2023-04-15
 
   
 
-<p align="center"><img src="/assets/images/Paper/ffnerv/figure\_1.png"></p>
+<p align="center"><img src="/assets/images/Paper/ffnerv/figure_1.png"></p>
 
   
 
@@ -71,7 +71,7 @@ FFNeRV는 flow에 의해 유도된 인접 프레임을 통합하여 비디오 �
 
 ## FFNeRV
 
-<p align="center"><img src="/assets/images/Paper/ffnerv/figure\_2.png"></p>
+<p align="center"><img src="/assets/images/Paper/ffnerv/figure_2.png"></p>
 
 ### Multi-Resolution Temporal Grid
 
@@ -86,7 +86,7 @@ FFNeRV는 flow에 의해 유도된 인접 프레임을 통합하여 비디오 �
 
   
 
-<p align="center"><img src="/assets/images/Paper/ffnerv/figure\_3.png"></p>
+<p align="center"><img src="/assets/images/Paper/ffnerv/figure_3.png"></p>
 
 - flow guided frame aggregation을 제안하여 프레임별 비디오 표현에 이 접근방식을 도입
 - 다중 해상도 그리드에서 흐름맵 및 집계 가중치를 생성하는 latent feature를 사용
