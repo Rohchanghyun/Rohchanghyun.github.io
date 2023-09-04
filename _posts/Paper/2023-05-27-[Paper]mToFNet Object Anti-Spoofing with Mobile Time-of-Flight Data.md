@@ -59,7 +59,7 @@ p2p거래 규모가 증가하면서 판매자가 스캠에 악의적으로 스�
 - 실제 쌍과 디스플레이 쌍 간의 ToF맵 차이를 관찰하고 ToF맵을 활용한 robust spoofing 방법을 제안.
 - 실제 이미지 쌍과 ToF맵은 실제 객체를 캡쳐하여 얻고 디스플레이 쌍은 화면에 표시된 이미지를 recapturing하여 획득.
 
-####   
+ 
 
 #### ToF Frequency Analysis
 
@@ -112,8 +112,8 @@ ToF 표현 네트워크는 실제 쌍과 두 쌍의 데이터 분포를 각각 �
 
 > 입력:  
 > 
->     - `image : w * h * 3`  
->     - `ToF map : w * h` 
+>     - `image : w \* h \* 3`
+>     - `ToF map : w \* h`
 
 두 임베딩 모델은 각각 인코더와 generator를 포함한다.
 

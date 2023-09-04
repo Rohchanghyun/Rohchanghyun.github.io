@@ -84,11 +84,10 @@ FrePGAN을 훈련하기 위해 perturbation generation loss에 의해 훈련된 
 > 입력: w\*h\*c  
 > y = 0 or 1(real or fake)  
 
-####   
 
 #### Perturbation Map Generator
 
-<p align="center"><img src="/assets/images/Paper/FrePGAN/figure_2.png"></p>
+<p align="center"><img src="/assets/images/Paper/FrepGAN/figure_2.png"></p>
 
 그림과 같이 주파수 영역으로 변환할 때 실제 이미지와 가짜 이미지를 쉽게 구분할 수 있다.
 
