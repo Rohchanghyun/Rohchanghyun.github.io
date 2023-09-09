@@ -85,6 +85,7 @@ FrePGAN을 훈련하기 위해 perturbation generation loss에 의해 훈련된 
 > y = 0 or 1(real or fake)  
 
 
+
 #### Perturbation Map Generator
 
 <p align="center"><img src="/assets/images/Paper/FrepGAN/figure_2.png"></p>
