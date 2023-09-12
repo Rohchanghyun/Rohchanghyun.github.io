@@ -67,7 +67,7 @@ SwinIR은 위에 설명한 3가지 모듈로 구성된다.
 
  
 
-<p align="center"><img src="/assets/images/Paper/SwinIR/figure\_1.png"></p>  
+<p align="center"><img src="/assets/images/Paper/SwinIR/figure_1.png"></p>  
 #### Shallow and deep feature extraction  
 
 > ILQ : H \* W \* C  
@@ -105,7 +105,7 @@ long skip connection을 통해 SwinIR은 저주파 정보를 reconstructoin모�
 
 #### loss function  
 이미지 SR의 경우 L1 pixel loss를 최소화하여 SwinIR파라미터를 최적화한다.  
-> L = || I_RHQ - I_HQ ||1  
+> L = \|| I_RHQ - I_HQ \||1  
 
 여기서 I_RHQ는 ILQ를 SwinIR의 입력으로 함으로써 얻어지며, IHQ는 해당 ground-truth 이미지이다.  
 
