@@ -43,9 +43,9 @@ local attention 기반 transformer가 이 문제를 개선하지만, receptive f
 
 이러한 문제를 극복하기 위해 low-level의 vision task를 위한 MAXIM이라는 일반적인 이미지 처리 네트워크를 제안한다.
 
-MAXIM의 key idea는 local 및 global 상호작용을 모두 병렬로 캡쳐하는 multi axis 접근법을 사용하는 것이다.
+<span style="color: #ed6663"> MAXIM의 key idea는 local 및 global 상호작용을 모두 병렬로 캡쳐하는 multi axis 접근법을 사용하는 것이다.
 
-각 branch에 대해 단일 axis에 대한 정보를 혼합함으로써 이 MLP 기반 operator는 fully convolution이 되고 이미지 크기에 대해 선형으로 확장되므로 고밀도 이미지 처리 작업에 대한 유연성이 크게 향상된다.
+각 branch에 대해 단일 axis에 대한 정보를 혼합함으로써 이 MLP 기반 operator는 fully convolution이 되고 이미지 크기에 대해 선형으로 확장되므로 고밀도 이미지 처리 작업에 대한 유연성이 크게 향상된다.</span>
 
 또한 동일한 multi axis 방법을 사용하여 MAXIM의 neck에서 skip connection을 적응적으로 연결하여 성능을 더욱 향상시키는 순수 MLP 기반 cross gating 모듈을 정의하고 구축한다.
 
