@@ -75,7 +75,7 @@ backbone은 UNet의 encoder-decoder 설계를 따른다.
 
 conv3 * 3 과 같은 작은 footprint의 operator가 UNet과 같은 네트워크의 성능에 필수적이라는것을 관찰했기 때문에, 각 블록에 대한 하이브리드 모델 설계(local - conv, long range interactions - MLP)를 최대한 활용한다.
 
-다른 scale에서 long range spatial mixing을 허용하기 위해, multi-axis MLP블록을 각 인코더 디코더 및 병목현상에 삽입하고, residual channel attention block(LayerNorm - Conv - LeakyReLU - Conv - SE)가 쌓여있다.
+다른 scale에서 long range spatial mixing을 허용하기 위해, multi-axis MLP블록을 각 인코더 디코더 및 bottleneck에 삽입하고, residual channel attention block(LayerNorm - Conv - LeakyReLU - Conv - SE)가 쌓여있다.
 
 cross attention에 대한 효율적인 2차 대안인 Cross gating block을 구축하기 위해 gate MLP를 확장한다.
 
