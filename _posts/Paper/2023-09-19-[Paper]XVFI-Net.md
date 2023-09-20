@@ -136,7 +136,7 @@ optical flow의 flow reverse로 임의의 시간 t에서 flow를 추정할 수 �
 
 
 #### Adjustable and Efficient Scalability
-
+<p align="center"><img src="/assets/images/Paper/XVFI-Net/figure_3.png"></p>
 - **Adjustable Scalability**
 
 그림은 XVFI-Net의 VFI 프레임워크를 보여주며, 상황별 feature map을 1/(2^s) 만큼 반복 downscaling 함으로써 모든 scale level에서 시작할 수 있으며, 가장 거친(coarsest) optical flow를 예측하여 효과적으로 큰 움직임을 포착한다.
@@ -147,7 +147,11 @@ optical flow의 flow reverse로 임의의 시간 t에서 flow를 추정할 수 �
 
 모든 scale level에 대한 학습을 일반화하기 위해, trainingwnㅇ에 선택된 scale level s에 대한 모든 출력 I^s에 대해 multi-scale reconstruction loss를 적용한다.
 
+<p align="center"><img src="/assets/images/Paper/XVFI-Net/figure_4.png"></p>
+<p align="center"><img src="/assets/images/Paper/XVFI-Net/figure_5.png"></p>
+<p align="center"><img src="/assets/images/Paper/XVFI-Net/figure_6.png"></p>
 
 
 ### Loss functions
 
+<p align="center"><img src="/assets/images/Paper/XVFI-Net/figure_7.png"></p>
