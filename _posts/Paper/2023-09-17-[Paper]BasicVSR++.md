@@ -132,7 +132,7 @@ BasicVSR++ 는 전파 및 정렬을 개선하기 위한 2가지 효과적인 수
 >
 > g_i : feature extracted from x_i
 
-
+<p align="center"><img src="/assets/images/Paper/BasicVSR++/figure_4.png"></p>
 
 ### Flow-Guided Deformable Alignment
 
@@ -149,3 +149,6 @@ flow-guided deformable Alignment는 optical flow를 guide로 채택한다.
 - CNN은 local receptive field를 가지고 있기 때문에 optical flow를 사용하여 feature를 사전 정렬함으로써 오프셋 학습을 지원할 수 있다.
 - residu만 학습함으로써, 네트워크는 optical flow에서 작은 편차만 학습하면 되므로 일반적인 변형 정렬 모듈의 부담을 줄일 수 있다.
 - 뒤틀린 feature를 직접 연결하는 대신 DCN의 변조 마스크는 서로 다른 픽셀의 기여도를 측정하는 attention map으로 작용하여 추가적인 유연성을 제공한다.
+
+<p align="center"><img src="/assets/images/Paper/BasicVSR++/figure_5.png"></p>
+<p align="center"><img src="/assets/images/Paper/BasicVSR++/figure_6.png"></p>
