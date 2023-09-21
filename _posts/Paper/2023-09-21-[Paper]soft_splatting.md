@@ -1,4 +1,23 @@
-Softmax Splatting for Video Frame interpolation
+---
+layout : single
+title:  "Softmax Splatting for Video Frame interpolation"
+excerpt: "Softmax Splatting for Video Frame interpolation 논문 정리"
+
+categories:
+  - Paper
+tags:
+  - VFI
+  - LLCV
+
+toc: true
+toc_sticky: true
+
+author_profile: true
+sidebar_main: true
+
+date: 2023-09-21
+last_modified_at: 2023-09-21
+---
 
 ## Abstract
 
@@ -47,6 +66,8 @@ flow base 방법의 한가지 일반적인 접근법은 합성해야 하는 프�
 
 ## Method
 
+<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_11.png"></p>
+
 ### Softmax Splatting for Frame Interpolation
 
 프레임 보간은 2개의 프레임(I_0,I_1)이 주어지면 중간 프레임 합성을 목표로 하며, t는 원하는 시간적 위치를 정의한다.
@@ -69,13 +90,11 @@ mapping 시 동일한 target pixel에 위치하는 충돌을 해결하기 위한
 
 <p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_2.png"></p>
 
-<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_3.png"></p>
-
 그림에서 보는 바와 같이, summation splatting은 자동차의 라이트같은 중첩된 영역에서 밝기 불일치를 유발하고, 이중선형 커널 b는 I_0의 픽셀들로부터 부분적인 contribution만을 받는 I의 픽셀들로 이어지게 하고, 이는 다시 밝기 불일치를 가져온다.
 
 그러나 본 논문에서는 이 summation splatting을 모든 forward warping 접근의 기초로 사용한다.
 
-<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_4.png"></p>
+<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_3.png"></p>
 
 
 
@@ -85,7 +104,7 @@ mapping 시 동일한 target pixel에 위치하는 충돌을 해결하기 위한
 
 떄문에 본 논문에서는 Σ의 정의를 재사용하여 average splatting Φ 를 결정한다.
 
-<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_5.png"></p>
+<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_4.png"></p>
 
 이 방법은 위의 그림과 같이 밝기 불일치를 처리하지만, 잔디와 같은 겹치는 지역까지 더하여 평균한다.
 
@@ -95,7 +114,7 @@ mapping 시 동일한 target pixel에 위치하는 충돌을 해결하기 위한
 
 중첩 영역을 더 잘 분리하기 위해, importance mask z에 의해 I_0에 선형 가중치를 부여하고 다음과 같이 Linear splatting을 정의
 
-<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_6.png"></p>
+<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_5.png"></p>
 
 이 방법은 배경을 더 잘 분리할 수는 있지만, z에 대한 translation에 대해 불변하지는 않다. 예를들어, 만약 z가 inverse depth를 나타낸다면, 자동차는 z = 1/1이고 배경은 z = 1/10이라면 잘 분리될 것이다. 하지만 자동차는 z = 1/101이고 배경은 z = 1/110이라면, 깊이 면에서 비슷하게 떨어져 있음에도 불구하고 다시 평군이 될 것이다.
 
@@ -105,7 +124,7 @@ mapping 시 동일한 target pixel에 위치하는 충돌을 해결하기 위한
 
 translational invariance를 갖는 중요도 마스크 z에 따라 중첩 영역을 명확하게 분리하기 위해, 다음과 같이 softmax splatting을 제안한다.
 
-<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_7.png"></p>
+<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_6.png"></p>
 
 예를 들어 z가 픽셀의 깊이가 관련이 있다 가정하자. 이 접근법은 풀의 흔적 없이 자동차의 앞과 뒤를 명확히 분리할 수 있다. 게다가 softmax 함수와 resemblance(유사성)을 공유한다. 
 
@@ -123,7 +142,7 @@ scale에는 불변하지 않지만 z에 α를 곱하면 중복된 지역이 얼�
 
 
 
-<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_8.png"></p>
+<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_7.png"></p>
 
 v에서 직접 z 를 얻을 수도 있지만 이 v를 수렴할 수는 없다.
 
@@ -132,7 +151,7 @@ v에서 직접 z 를 얻을 수도 있지만 이 v를 수렴할 수는 없다.
 
 
 #### Feature Pyramids for Image synthesis
-
+<p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_8.png"></p>
 두 개의 입력 프레임이 주어지면, 먼저 기성의 optical flow 방법을 사용하여 프레임간 flow를 추정하고, 그 후 미리 정의된 필터 ψ을 사용하여 입력 영상에서 일반적인 컨텍스트 정보를 추출하고 합성 네트워크 φ를 사용한 식에 따라 컨텍스트 맵과 함께 이미지를 forward warp 하여 보간 결과를 얻는다.
 
 <p align="center"><img src="/assets/images/Paper/SoftSplatting/figure_9.png"></p>
