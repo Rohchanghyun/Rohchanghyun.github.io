@@ -1,4 +1,24 @@
-Learning A Coarse-to-Fine Diffusion Transformer for Image Restoration
+---
+layout : single
+title:  "Learning A Coarse-to-Fine Diffusion Transformer for Image Restoration"
+excerpt: "Learning A Coarse-to-Fine Diffusion Transformer for Image Restoration 논문 정리"
+
+categories:
+  - Paper
+tags:
+  - Diffusion
+  - Image restoration
+  - LLCV
+
+toc: true
+toc_sticky: true
+
+author_profile: true
+sidebar_main: true
+
+date: 2023-09-24
+last_modified_at: 2023-09-24
+---
 
 
 
