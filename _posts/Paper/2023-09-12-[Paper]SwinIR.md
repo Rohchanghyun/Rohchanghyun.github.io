@@ -29,8 +29,7 @@ SwinIR은 3가지 부분으로 이루어져 있다.
 2. deep feature extraction  
 3. high-quality image reconstruction  
 
-특히 deep feature extractoin  
-모듈은 여러 개의 residual swin transformer block들로 구성되어 있으며 각 블록에는 residual connection과 함께 여러 swin transformer layer가 포함되어있다.  
+특히 deep feature extraction 모듈은 여러 개의 residual swin transformer block들로 구성되어 있으며 각 블록에는 residual connection과 함께 여러 swin transformer layer가 포함되어있다.  
 
 
 ## Introduction
@@ -49,12 +48,12 @@ Swin Transformer는 CNN과 transformer의 장점을 통합하여, local attentio
 본 논문에서는 Swin Transformer를 기반으로 한 영상 복원 모델 SwinIR을 제안한다.  
 SwinIR은 위에 설명한 3가지 모듈로 구성된다.  
 - shallow feature extraction  
-- 컨볼루션 레이어를 사용하여 shallow feature를 추출하고, 이는 저주파 정보를 보존하기 위해 reconstruction 모듈로 직접 전송된다.  
+  - 컨볼루션 레이어를 사용하여 shallow feature를 추출하고, 이는 저주파 정보를 보존하기 위해 reconstruction 모듈로 직접 전송된다.  
 - deep feature extraction  
-- 주로 residual Swin Transformer BLock으로 구성되며, 각 블록은 local attention 및 cross window interaction을 위해 여러 Swin Transformer layer를 사용한다.  
-- feature enhancement를 위해 블록 끝에 컨볼루션 레이어를 추가하고, feature aggregation을 위한 shortcut을 제공하기 위해 residual connection을 사용한다.  
+  - 주로 residual Swin Transformer BLock으로 구성되며, 각 블록은 local attention 및 cross window interaction을 위해 여러 Swin Transformer layer를 사용한다.  
+  - feature enhancement를 위해 블록 끝에 컨볼루션 레이어를 추가하고, feature aggregation을 위한 shortcut을 제공하기 위해 residual connection을 사용한다.  
 - high-quality reconstruction  
-- shallow feature, deep feature모두 고품질 영상 재구성을 위해 재구성 모듈에 전달된다.  
+  - shallow feature, deep feature모두 고품질 영상 재구성을 위해 재구성 모듈에 전달된다.  
 
 장점  
 - 이미지 컨탠츠와 attention weight사이의 콘텐츠 기반 상호작용으로 공간적으로 변하는 컨볼루션으로 해석될 수 있다.  

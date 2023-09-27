@@ -45,7 +45,7 @@ VFI는 주어진 두 연속 프레임 사이에서 하나 이상의 중간 프�
 
 본 논문에서는 이러한 딥러닝 기반 VFI방법의 문제를 해결하기 위해 4k 동영상을 직접 촬영하여 X4K1000FPS 라는 고해상도 고품질 HFR 데이터 세트를 구상했다.
 
-또한 이 데이터세트를 효과적으로 처리하도록 설계된 XVFI-Netdㅣ라는 극단적인 VFI 모델을 제안한다.
+또한 이 데이터세트를 효과적으로 처리하도록 설계된 XVFI-Net이라는 극단적인 VFI 모델을 제안한다.
 
 
 
@@ -62,7 +62,7 @@ complementary flow를 취하여 구멍을 효과적으로 채우는 complementar
 ### key ideas
 
 - X4K1000FPS라는 4k 해상도의 고품질 HFR 비디오 데이터 세트를 제안
-- 시간 t에서 입력 프레임까지 안정적인 optical flow estimation을 생성하여 정성적 서은ㅇ과 정량적 성능을 모두 향상시킬 수 있는 CFR을 제안
+- 시간 t에서 입력 프레임까지 안정적인 optical flow estimation을 생성하여 정성적 성능과 정량적 성능을 모두 향상시킬 수 있는 CFR을 제안
 - XVFI-Net은 입력 해상도 또는 움직임 크기에 따라 추론 위한 척도의 수 측면에서 조정 가능한 하향 조정된 입력에서 위쪽 방향으로 시작할 수 있다.
 
 
@@ -91,7 +91,7 @@ XVFI-Net은 HR의 연속적인 두 입력 프레임 I_0와 I_1 사이의 임의�
 
 고정된 수의 scale level을 가진 구조는 입력 비디오의 다양한 공간 해상도에 적응하기 어렵다. 각 스케일 레벨의 구조가 서로 다른 스케일 레벨에서 공유되지 않기 때문에 스케일 깊이가 증가한 새로운 구조를 다시 training 해야 하기 때문이다.
 
-input frame의 다양한 공간 해상도의 scale에 적응성을 갖기 위해 XVFI-Net은 desired coarse scale level(원하는 거친 스케일 레벨)에서 시작하는 optical flow estimationdl 가능하도록 설계되어 입력 프레임의 움직임 크기에 적응한다.
+input frame의 다양한 공간 해상도의 scale에 적응성을 갖기 위해 XVFI-Net은 desired coarse scale level(원하는 거친 스케일 레벨)에서 시작하는 optical flow estimation이 가능하도록 설계되어 입력 프레임의 움직임 크기에 적응한다.
 
 이를 위해 XVFI-Net은 다양한 스케일 레벨에서 매개 변수를 공유한다.
 
@@ -119,7 +119,7 @@ XVFI-Net의 feature extractoin block은 두 입력 프레임 사이의 큰 움�
 
 - **BiOF-I module**
 
-먼저 상황별 피라미드(contextual pyramid)c = {c^s}를 stride 2 convoultion을 xhdgo C0_0 및 C1_0에서 다시 추출한 후 각 scale level(s = 0,1,2...)에서 XVFI-Net에서 입력으로 사용한디.(이때 s = 0 은 원래 input frame의 scale을 나타낸다).
+먼저 상황별 피라미드(contextual pyramid)c = {c^s}를 stride 2 convoultion을 통해 C0_0 및 C1_0에서 다시 추출한 후 각 scale level(s = 0,1,2...)에서 XVFI-Net의 입력으로 사용한다.(이때 s = 0 은 원래 input frame의 scale을 나타낸다).
 
 
 
@@ -131,7 +131,7 @@ optical flow의 flow reverse로 임의의 시간 t에서 flow를 추정할 수 �
 
 반면 flow reverses의 성능을 안정화하기 위해 선형 근사와 flow reverse 모두의 보완적 이점을 사용한다.
 
-따라서 시간 t에서 0 또는 1 까지의 안정적인 optical flow 추정치는 0의 앵커 flow와 complementary flow의 정규화된 선형 조합으로 계산될 수 있으며, 이를 complementary flow reversal라고 한다.
+따라서 시간 t에서 0 또는 1 까지의 안정적인 optical flow 추정치는 negative의 앵커 flow와 complementary flow의 정규화된 선형 조합으로 계산될 수 있으며, 이를 complementary flow reversal라고 한다.
 
 
 
