@@ -1,24 +1,40 @@
 ---
+
 layout : single
-title:  "[Paper] Video Object Segmentation with Episodic Graph Memory Networks"
+
+title: "[Paper] Video Object Segmentation with Episodic Graph Memory Networks"
+
 excerpt: "Video Object Segmentation with Episodic Graph Memory Networks 논문 리뷰"
 
+
+
 categories:
-  - Paper
+
+- Paper
+
 tags:
-  - video_segmentation
+
+- video_segmentation
+
 
 toc: true
+
 toc_sticky: true
 
+
+
 author_profile: true
+
 sidebar_main: true
 
+
+
 date: 2024-04-12
+
 ---
 
 
->ECCV 2020
+>ECCV 2020   
 >Xiankai Lu1, Wenguan Wang2, Martin Danelljan2 Tianfei Zhou1, Jianbing Shen1, and Luc Van Gool2 1Inception Institute of Artificial Intelligence 2ETH Zurich
 
 # Abstract
