@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Neural Residual Flow FIelds for Efficient Video Representations"
+title:  "[Paper] Neural Residual Flow FIelds for Efficient Video Representations"
 excerpt: "Neural Residual Flow FIelds for Efficient Video Representations 논문 정리"
 
 categories:

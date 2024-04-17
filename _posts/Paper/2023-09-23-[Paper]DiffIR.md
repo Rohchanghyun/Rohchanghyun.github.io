@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "DiffIR: Efficient Diffusion Model for Image Restoration"
+title:  "[Paper] DiffIR: Efficient Diffusion Model for Image Restoration"
 excerpt: "DiffIR: Efficient Diffusion Model for Image Restoration 논문 정리"
 
 categories:

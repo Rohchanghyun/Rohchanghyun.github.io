@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]Signing outside the studio : Benchmarking background Robutness for Continuous Sign Language Recognition"
+title: "[Paper] Signing outside the studio : Benchmarking background Robutness for Continuous Sign Language Recognition"
 
 excerpt: "Signing outside the studio : Benchmarking background Robutness for Continuous Sign Language Recognition 논문 리뷰"
 

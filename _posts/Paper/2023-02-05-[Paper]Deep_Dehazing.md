@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Deep Dehazing Powered by Image Processing Network"
+title:  "[Paper] Deep Dehazing Powered by Image Processing Network"
 excerpt: "Deep Dehazing Powered by Image Processing Network 논문 정리"
 
 categories:

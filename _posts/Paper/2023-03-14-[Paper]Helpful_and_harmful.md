@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "HElpful or Harmful: Inter-Task Association in Continual Learning"
+title:  "[Paper] HElpful or Harmful: Inter-Task Association in Continual Learning"
 excerpt: "HElpful or Harmful: Inter-Task Association in Continual Learning 논문 정리"
 
 categories:

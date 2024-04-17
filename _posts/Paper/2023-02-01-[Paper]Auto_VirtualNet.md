@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Auto VirtualNet"
+title:  "[Paper] Auto VirtualNet"
 excerpt: "Auto VirtualNet 논문 정리"
 
 categories:

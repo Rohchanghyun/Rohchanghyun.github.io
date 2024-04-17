@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]Swin Transformer"
+title: "[Paper] Swin Transformer"
 
 excerpt: "Swin Transformer 논문 리뷰"
 

@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Fusion of an RGB camera and LiDAR sensor through a Graph CNN for 3D ibject detection"
+title:  "[Paper] Fusion of an RGB camera and LiDAR sensor through a Graph CNN for 3D ibject detection"
 excerpt: "Fusion of an RGB camera and LiDAR sensor through a Graph CNN for 3D ibject detection 논문 정리"
 
 categories:

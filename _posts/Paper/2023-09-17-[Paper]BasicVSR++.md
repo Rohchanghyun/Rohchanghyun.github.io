@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "BasicVSR++: Improving Video Super-Resolution with Enhanced Propagation ans Alignment"
+title:  "[Paper] BasicVSR++: Improving Video Super-Resolution with Enhanced Propagation ans Alignment"
 excerpt: "BasicVSR++: Improving Video Super-Resolution with Enhanced Propagation ans Alignment 논문 정리"
 
 categories:

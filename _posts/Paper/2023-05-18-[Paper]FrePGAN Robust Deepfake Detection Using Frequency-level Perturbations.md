@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "FrePGAN: Robust Deepfake Detection Using Frequency-level Perturbations"
+title:  "[Paper] FrePGAN: Robust Deepfake Detection Using Frequency-level Perturbations"
 excerpt: "FrePGAN: Robust Deepfake Detection Using Frequency-level Perturbations 논문 정리"
 
 categories:

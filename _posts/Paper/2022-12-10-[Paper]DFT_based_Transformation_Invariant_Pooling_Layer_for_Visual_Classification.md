@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]DFT-based Transformation Invariant Pooling Layer for Visual Classification"
+title: "[Paper] DFT-based Transformation Invariant Pooling Layer for Visual Classification"
 
 excerpt: "DFT-based Transformation Invariant Pooling Layer for Visual Classification 논문 리뷰"
 

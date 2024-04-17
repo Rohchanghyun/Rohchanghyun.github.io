@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]Vision Transformer"
+title: "[Paper] Vision Transformer"
 
 excerpt: "Vision Transformer 논문 리뷰"
 

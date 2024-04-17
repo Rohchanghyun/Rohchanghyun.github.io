@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Dual Gradient Based Snow Attentive Desnowing"
+title:  "[Paper] Dual Gradient Based Snow Attentive Desnowing"
 excerpt: "Dual Gradient Based Snow Attentive Desnowing 논문 정리"
 
 categories:

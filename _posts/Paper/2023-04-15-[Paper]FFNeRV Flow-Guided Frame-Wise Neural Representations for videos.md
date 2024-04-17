@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "FFNeRV: Flow-Guided Frame-Wise Neural Representations for videos"
+title:  "[Paper] FFNeRV: Flow-Guided Frame-Wise Neural Representations for videos"
 excerpt: "FFNeRV: Flow-Guided Frame-Wise Neural Representations for videos 논문 정리"
 
 categories:

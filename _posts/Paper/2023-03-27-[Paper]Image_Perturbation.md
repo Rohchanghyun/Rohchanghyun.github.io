@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Image Perturbation-Based Deep Learning for Face Recognition Utilizing Discrete Cosine Transform"
+title:  "[Paper] Image Perturbation-Based Deep Learning for Face Recognition Utilizing Discrete Cosine Transform"
 excerpt: "Image Perturbation-Based Deep Learning for Face Recognition Utilizing Discrete Cosine Transform 논문 정리"
 
 categories:

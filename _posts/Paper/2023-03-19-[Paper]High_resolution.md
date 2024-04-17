@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "High Resolution processing and sigmoid fusion modules for efficient detection of small objects in an embedded system"
+title:  "[Paper] High Resolution processing and sigmoid fusion modules for efficient detection of small objects in an embedded system"
 excerpt: "High Resolution processing and sigmoid fusion modules for efficient detection of small objects in an embedded system 논문 정리"
 
 categories:

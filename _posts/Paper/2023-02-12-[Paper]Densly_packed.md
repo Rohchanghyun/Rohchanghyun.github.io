@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Densely-packed Object Detection via Hard Negative-Aware Anchor Attention"
+title:  "[Paper] Densely-packed Object Detection via Hard Negative-Aware Anchor Attention"
 excerpt: "Densely-packed Object Detection via Hard Negative-Aware Anchor Attention 논문 정리"
 
 categories:

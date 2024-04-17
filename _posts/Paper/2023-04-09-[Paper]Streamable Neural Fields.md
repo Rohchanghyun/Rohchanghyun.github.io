@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Streamable Neural Fields"
+title:  "[Paper] Streamable Neural Fields"
 excerpt: "Streamable Neural Fields 논문 정리"
 
 categories:

@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "mToFNet: Object Anti-Spoofing with Mobile Time-of-Flight Data"
+title:  "[Paper] mToFNet: Object Anti-Spoofing with Mobile Time-of-Flight Data"
 excerpt: "mToFNet: Object Anti-Spoofing with Mobile Time-of-Flight Data 논문 정리"
 
 categories:

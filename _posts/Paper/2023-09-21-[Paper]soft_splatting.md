@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Softmax Splatting for Video Frame interpolation"
+title:  "[Paper] Softmax Splatting for Video Frame interpolation"
 excerpt: "Softmax Splatting for Video Frame interpolation 논문 정리"
 
 categories:

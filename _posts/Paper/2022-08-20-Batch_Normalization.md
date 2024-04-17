@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]Batch Normalization"
+title: "[Paper] Batch Normalization"
 
 excerpt: "Batch Normalization 리뷰"
 

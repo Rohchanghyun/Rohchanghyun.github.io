@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]Layer_Normalization"
+title: "[Paper] Layer_Normalization"
 
 excerpt: "Layer Normalization 논문 리뷰"
 

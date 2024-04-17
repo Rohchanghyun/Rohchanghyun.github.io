@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Learning A Coarse-to-Fine Diffusion Transformer for Image Restoration"
+title:  "[Paper] Learning A Coarse-to-Fine Diffusion Transformer for Image Restoration"
 excerpt: "Learning A Coarse-to-Fine Diffusion Transformer for Image Restoration 논문 정리"
 
 categories:

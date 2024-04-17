@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]Generative Bias for Robust Visual Question Answering"
+title: "[Paper] Generative Bias for Robust Visual Question Answering"
 
 excerpt: "Generative Bias for Robust Visual Question Answering 논문 리뷰"
 

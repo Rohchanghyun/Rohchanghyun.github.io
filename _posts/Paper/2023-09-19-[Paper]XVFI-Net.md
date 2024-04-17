@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "XVFI - eXtreme Video Frame Interpolation"
+title:  "[Paper] XVFI - eXtreme Video Frame Interpolation"
 excerpt: "XVFI - eXtreme Video Frame Interpolation 논문 정리"
 
 categories:

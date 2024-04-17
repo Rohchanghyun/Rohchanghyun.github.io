@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "SwinIR : Image Restoration Using Swin Transformer"
+title:  "[Paper] SwinIR : Image Restoration Using Swin Transformer"
 excerpt: "SwinIR : Image Restoration Using Swin Transformer 논문 정리"
 
 categories:

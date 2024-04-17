@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]Meta-Learning for Adaptation of Deep Optical Flow Networks"
+title: "[Paper] Meta-Learning for Adaptation of Deep Optical Flow Networks"
 
 excerpt: "Meta-Learning for Adaptation of Deep Optical Flow Networks 논문 리뷰"
 

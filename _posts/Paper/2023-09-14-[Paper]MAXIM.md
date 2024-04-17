@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "MAXIM: Multi-Axis MLP for Image Processing"
+title:  "[Paper] MAXIM: Multi-Axis MLP for Image Processing"
 excerpt: "MAXIM: Multi-Axis MLP for Image Processing 논문 정리"
 
 categories:

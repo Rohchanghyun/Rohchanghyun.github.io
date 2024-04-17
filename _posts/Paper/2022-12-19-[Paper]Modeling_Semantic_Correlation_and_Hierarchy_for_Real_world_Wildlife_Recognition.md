@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]Modeling Semantic Correlation and Hierarchy for Real-world Wildlife Recognition"
+title: "[Paper] Modeling Semantic Correlation and Hierarchy for Real-world Wildlife Recognition"
 
 excerpt: "Modeling Semantic Correlation and Hierarchy for Real-world Wildlife Recognition 논문 리뷰"
 

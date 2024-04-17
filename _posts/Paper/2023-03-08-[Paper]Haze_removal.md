@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Haze removal using deep convolutional neural network for Korea Multi-Purpose Satellite-3A (KOMPSAT-3A) multispectral remote sensing imagery"
+title:  "[Paper] Haze removal using deep convolutional neural network for Korea Multi-Purpose Satellite-3A (KOMPSAT-3A) multispectral remote sensing imagery"
 excerpt: "Haze removal using deep convolutional neural network for Korea Multi-Purpose Satellite-3A (KOMPSAT-3A) multispectral remote sensing imagery 논문 정리"
 
 categories:

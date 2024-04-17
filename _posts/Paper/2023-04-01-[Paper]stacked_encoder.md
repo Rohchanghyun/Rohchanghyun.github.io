@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Stacked encoder-decoder transformer with boundary smoothing for action segmentation"
+title:  "[Paper] Stacked encoder-decoder transformer with boundary smoothing for action segmentation"
 excerpt: "Stacked encoder-decoder transformer with boundary smoothing for action segmentation 논문 정리"
 
 categories:

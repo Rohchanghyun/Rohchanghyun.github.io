@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]Self-Sufficient Framework for Continuous sign language recognition"
+title: "[Paper] Self-Sufficient Framework for Continuous sign language recognition"
 
 excerpt: "Self-Sufficient Framework for Continuous sign language recognition 논문 리뷰"
 

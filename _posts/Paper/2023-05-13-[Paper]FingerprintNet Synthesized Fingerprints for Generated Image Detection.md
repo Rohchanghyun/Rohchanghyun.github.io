@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "FingerprintNet: Synthesized Fingerprints for Generated Image Detection"
+title:  "[Paper] FingerprintNet: Synthesized Fingerprints for Generated Image Detection"
 excerpt: "FingerprintNet: Synthesized Fingerprints for Generated Image Detection 논문 정리"
 
 categories:

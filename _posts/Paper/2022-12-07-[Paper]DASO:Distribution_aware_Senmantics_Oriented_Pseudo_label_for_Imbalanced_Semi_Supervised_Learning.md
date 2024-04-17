@@ -2,7 +2,7 @@
 
 layout : single
 
-title: "[Paper]DASO : Distribution-aware Senmantics Oriented Pseudo-label for Imbalanced Semi-Supervised Learning"
+title: "[Paper] DASO : Distribution-aware Senmantics Oriented Pseudo-label for Imbalanced Semi-Supervised Learning"
 
 excerpt: "DASO: Distribution-aware Senmantics Oriented Pseudo-label for Imbalanced Semi-Supervised Learning 논문 리뷰"
 
