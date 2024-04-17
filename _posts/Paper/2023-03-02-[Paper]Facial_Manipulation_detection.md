@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "Generalized Facial Manipulation Detection with Edge Region Feature Extraction"
+title:  "[Paper] Generalized Facial Manipulation Detection with Edge Region Feature Extraction"
 excerpt: "Generalized Facial Manipulation Detection with Edge Region Feature Extraction 논문 정리"
 
 categories:

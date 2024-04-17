@@ -1,6 +1,6 @@
 ---
 layout : single
-title:  "[Paper]Attention is all you need"
+title:  "[Paper] Attention is all you need"
 excerpt: "transformer 논문 review"
 
 categories:
