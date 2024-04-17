@@ -182,33 +182,33 @@ memory 내에서 가장 관련성이 높은 정보를 검색하고 이를 현재
 위의 그림의 controller의 read 단계
 1. query frame으로부터 visual feature $q$를 추출 $q \in \mathbb{R}^{W \times H \times C}$
 2. 먼저 read controller가 q를 input으로 받아 initial state $h^0$ 생성
-$$
+$
 h^0 = f_P(q) \in \mathbb{R}^{W \times H \times C}
-$$
+$
 여기서 $f_p$는 projection function
 
 3. 각 episodic reasoning step $k \in \{1,...,K\}$에서, external graph memory들을 사용하여, initial state와 memory node 간의 similarity를 비교한다.
-$$
+$
 s_i^k = \frac{h^{k-1} \cdot m_i^{k-1}}{\| h^{k-1} \| \| m_i^{k-1} \|} \in [-1, 1]
-$$
+$
 4. 이후 read weight $w_i^k$를 softmax normalization function을 통해 계산
-$$
+$
 w_i^k = \frac{\exp(s_i^k)}{\sum_j \exp(s_j^k)} \in [0,1]
-$$
+$
 5. 이때 몇몇 node들이 카메라 움직임이나 객체가 밖으로 나간 장면일 수 있기 때문에(noise가 존재),$w_i^k$가 memory cell의 confidence를 계산한다. 이 가중치를 사용하여 mask를 update. 이를 가중치를 통해 memory를 요약하는 과정이라 한다.
-$$
+$
 m^k = \sum_i w_i^k m_i^{k-1} \in \mathbb{R}^{W \times H \times C}
-$$
+$
 6. 이전까지의 방법을 통해 memory module은 $h^k$(query state of k-th step)과 가장 유사한 memory cell을 검색하여 memory summarization $m^k$를 얻는다. 이 memory summarization을 사용해 read controller는 다음과 같이 state를 update한다.
-$$
+$
 \tilde{h}^k = W_r^h * h^{k-1} + U_r^h * m^k \in \mathbb{R}^{W \times H \times C},
-$$
-$$
+$
+$
 a_r^k = \sigma(W_r^a * h^{k-1} + U_r^a * m^k) \in [0,1]^{W \times H \times C},
-$$
-$$
+$
+$
 h^k = a_r^k \circ \tilde{h}^k + (1 - a_r^k) \odot h^{k-1} \in \mathbb{R}^{W \times H \times C},
-$$
+$
 - $W_r^h, U_r^h$:convolution kernel
 - $*$: convolution
 - $\sigma$: sigmoid 
@@ -223,27 +223,27 @@ memory의 전체를 보다 장기적인 관점에서 조정하고 update.
 
 1. 각 k번째 step에서, 각 memory cell을($m_i$) 이전 state memory($m_i^{k-1}$), 현재 content $h^k$, 그리고 다른 cell들의 state($\{m_j^{k-1}\}_{j \neq i}$)를 사용하여 update한다.
 2. $m_i$에서 $m_j$로의 relation $e_{i,j}^k$를 feature 행렬에 대한 inner-product similarity(내적 유사도)로 정의한다.
-$$
+$
 e_{i,j}^k = m_i^{k-1} W_e m_j^{k-1 T} \in \mathbb{R}^{(WH) \times (WH)}
-$$
+$
 - $W_e \in \mathbb{R}^{C \times C}$: learnable weight matrix
 - $m_i^{k-1} \in \mathbb{R}^{(WH) \times C},m_j^{k-1} \in \mathbb{R}^{(WH) \times C}$ 가 matrix representation으로 flatten된다.
 3. 이후 $m_i$에 대해 summarized된 information $c_i^k$ 를 다른 cell로부터 계산한다.
-$$
+$
 c_i^k = \sum_{j \neq i} \text{softmax}(e_{i,j}^k) m_j^{k-1} \in \mathbb{R}^{W \times H \times C}
-$$
+$
 - $softmax()$: input의 각 row를 normalize한다.
 
 4. 3번 과정을 통해 이웃들의 information을 모은 뒤, state $m_i$를 memory write controller가 update 한다.
-$$
+$
 \tilde{m}_i^k = W_u^m * h^k + U_u^m * m_i^{k-1} + V_u^m * c_i^k \in \mathbb{R}^{W \times H \times C},
-$$
-$$
+$
+$
 a_u^k = \sigma(W_u^\alpha * h^k + U_u^\alpha * m_i^{k-1} + V_u^\alpha * c_i^k) \in [0,1]^{W \times H \times C},
-$$
-$$
+$
+$
 m_i^k = a_u^k \circ \tilde{m}_i^k + (1 - a_u^k) \odot m_i^{k-1} \in \mathbb{R}^{W \times H \times C}.
-$$
+$
 
 이 과정은 각 memory cell이 이웃 정보를 자신의 representation에 포함시킬 수 있도록 한다.
 또한 그래프 구조를 통해 반복적으로 추론함으로써(reasoning) 각 memory cell이 새로운 query 정보를 인코딩하고 개선된 representation을 만들어낸다.
@@ -256,9 +256,9 @@ $$
 ### Final Segmentation Readout
 
 episodic memory update의 K단계 이후, memory read controller로부터 나온 최종 state $h^K$를 활용하여 query에 대한 prediction을 생성한다.
-$$
+$
 \hat{S} = f_R(h^K, q) \in [0,1]^{W \times H \times 2},
-$$
+$
 - $f_R$: 최종 segmentation probability map을 제공한다.
 
 ## Network architecture
