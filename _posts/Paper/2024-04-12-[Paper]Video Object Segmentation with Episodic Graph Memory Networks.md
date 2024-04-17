@@ -118,7 +118,7 @@ O-VOS를 위해 이전 방법들은 network를 세밀하게 조정하고 각 vid
 하지만 본 논문에서는 training task(video)들의 분포로부터 sampling된 다양한 task에 대해 episodic memory based learner를 구축하여 학습된 모델이 새로운 task(test video)에서 성능을 내도록 한다.
 
 이에 대해 O-VOS에 <span style="color: #88c8ff">"learning to update"</span> 과정을 사용한다.
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted_image_20240411161646.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240411161646.png"></p>
 **<span style="color: #88c8ff">Learning to update</span>**
 1. one-shot support set에서 task representation 추출
 2. representation이 주어진 query에 대해 segmentation network를 update
@@ -145,7 +145,7 @@ case별로 효율적으로 적응하고 한번의 feed forward 과정 내에서 
 	- 논문에서 말하고자 하는 바는 episodic graph memory를 통해 frame간의 연관성을 찾아 edge로 연결하기 때문에 online learning과는 다르다는 점이다.(어떤 정보를 기억 해야할지 결정)
 
 ### Graph Memory Network
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240411170315.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240411170315.png"></p>
 graph memory network는 external graph memory와 learnable controller 로 이루어져 있다.
 
 <span style="color: #88c8ff">Graph Memory</span>
@@ -176,7 +176,7 @@ support set은 첫번째 annotated frame과 이전에 segment된 frame들의 조
 이때 graph memory는 N(=|M|)개의 frame에서 초기화되고, 이 frame들은 support sampling된다. 
 각 메모리 노드 $m_i$는 해당하는 support frame에 fc layer mempry encoder를 적용하여 생성된 초기 임베딩 $m_i^0$를 가진다. 
 
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240411205029.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240411205029.png"></p>
 ### Graph Memory Reading
 
 memory 내에서 가장 관련성이 높은 정보를 검색하고 이를 현재 작업에 활용하기 위한 과정
@@ -280,34 +280,34 @@ $$
 
 인스턴스와 one-hot label 간의 관계를 기억하지 못하도록 label shuffling을 사용한다.
 
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240414163115.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240414163115.png"></p>
 
 segmentation 실행할때마다 instance label을 shuffle한다.
 Z-VOS에서는 label이 주어지지 않기 때문에 사용하지 않는다.
 
 ## O-VOS
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240414185756.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240414185756.png"></p>
 
 - online learning 방법들과 비교했을 때 더 높은 정확도를 보여준다.
 - AGAME, FEELVOS, RGMP와 같은 matching based methods들은 빠른 inference 속도를 보여주지만 memory cost가 높고, 이에 비교하여 논문의 method는 빠른 속도와 낮은 memory usage를 보여준다.
 
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240414190450.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240414190450.png"></p>
 
 - overall: 4개의 metric을 평균낸것
 
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240414191153.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240414191153.png"></p>
 
 
 ## Z-VOS
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240414191933.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240414191933.png"></p>
 
 - $\tau$: stability
 
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240414192843.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240414192843.png"></p>
 
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240414192905.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240414192905.png"></p>
 
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240414193806.png"></p>
+<p align="center"><img src="/assets/images/Paper/VOS_episodic_graph_memory/20240414193806.png"></p>
 
 - Graph structre: node 3개를 쓰는게 최적이라고 설명. 성능은 올라가지만 메모리 사용량 측면에서 trade-off라고 생각
 - state updating: K가 4일때까지 성능은 계속 올라가지만 이후로는 변화가 없다고 한다.
