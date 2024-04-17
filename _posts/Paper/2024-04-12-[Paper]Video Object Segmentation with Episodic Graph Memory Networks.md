@@ -161,7 +161,7 @@ Graph Memory Network의 핵심 아이디어
 - target-specific 정보를 잘 포착
 
 memory는 고정된 크기의 fully-connected graph로 구성(파란박스 위쪽 초록부분 과정)
-$$G = (M, E)$$
+$G = (M, E)$
 i번째 memory cell
 $$
 m_i \in M
