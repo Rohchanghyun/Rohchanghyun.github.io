@@ -102,7 +102,7 @@ O-VOS를 위해 이전 방법들은 network를 세밀하게 조정하고 각 vid
 하지만 본 논문에서는 training task(video)들의 분포로부터 sampling된 다양한 task에 대해 episodic memory based learner를 구축하여 학습된 모델이 새로운 task(test video)에서 성능을 내도록 한다.
 
 이에 대해 O-VOS에 <span style="color: #88c8ff">"learning to update"</span> 과정을 사용한다.
-<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted image 20240411161646.png"></p>
+<p align="center"><img src="/assets/images/VOS_episodic_graph_memory/Pasted_image_20240411161646.png"></p>
 **<span style="color: #88c8ff">Learning to update</span>**
 1. one-shot support set에서 task representation 추출
 2. representation이 주어진 query에 대해 segmentation network를 update
