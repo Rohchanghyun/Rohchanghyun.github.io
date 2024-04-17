@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection"
+title: "[Paper] Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection"
 excerpt: "Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection 논문리뷰"
 categories:
   - Paper
