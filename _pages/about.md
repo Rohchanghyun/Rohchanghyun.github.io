@@ -5,6 +5,7 @@ sidebar_main: true
 author_profile: true
 ---
 
-## Rohchanghyun.github.io 블로그
+## Changhyun Roh
 
-나의 코딩 성장 일기 기록
+Computer vision 대학원 석사과정 재학중
+
