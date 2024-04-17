@@ -34,7 +34,7 @@ date: 2024-03-07
 - classification, segmentation network
 	global feature를 사용하여 수행
 
-<p align="center"><img src="/assets/images/Paper/3DSSD/20240307124819.png"></p>
+<p align="center"><img src="/assets/images/Paper/PointNet/20240307124819.png"></p>
 
 input
 - subset of points from euclidean space
