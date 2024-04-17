@@ -167,9 +167,9 @@ $
 m_i \in M
 $
 i번째 cell과 j번째 cell 사이의 관계
-$$
+$
 e_{i,j} = (m_i, m_j) \in E
-$$
+$
 support set은 첫번째 annotated frame과 이전에 segment된 frame들의 조합
 이때 graph memory는 N(=|M|)개의 frame에서 초기화되고, 이 frame들은 support sampling된다. 
 각 메모리 노드 $m_i$는 해당하는 support frame에 fc layer mempry encoder를 적용하여 생성된 초기 임베딩 $m_i^0$를 가진다. 
