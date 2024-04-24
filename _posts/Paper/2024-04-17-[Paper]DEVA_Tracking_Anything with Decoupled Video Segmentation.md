@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "[Paper] Anything with Decoupled Video Segmentation"
+title: "[Paper] DEVA: Anything with Decoupled Video Segmentation"
 excerpt: Anything with Decoupled Video Segmentation paper review
 categories:
   - Paper
