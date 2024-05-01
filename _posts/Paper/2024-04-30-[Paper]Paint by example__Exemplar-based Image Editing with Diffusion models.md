@@ -13,10 +13,8 @@ sidebar_main: true
 date: 2024-04-30
 ---
 
->CVPR 2023
-
->Binxin yang, Shuyang Gu, Bo Zhang, Ting Zhang, Xuejin Chen, Xiaoyan Sn, Dong Chen, Fang Wen
-
+>CVPR 2023  
+>Binxin yang, Shuyang Gu, Bo Zhang, Ting Zhang, Xuejin Chen, Xiaoyan Sn, Dong Chen, Fang Wen  
 >University of Science and Technology of China, Microsoft Reasearch Asia
 
 # **<span style="color: #a6acec">Abstract</span>**
@@ -92,19 +90,24 @@ GAN과 text encoder를 사용하여 image를 text에 맞게 최적화 하는 방
 {($X_s,X_r,m$),y}는 이 task에서 필요한 input과 label의 쌍인데, training을 위해 이러한 paired data를 얻어야 하는데 이는 사실상 불가능하다. annotate 비용이 비싸다는 점도 있고, 사람마다 label을 만들어낼 때 각자 다른 결과를 낼 수 있다.
 
 때문에 논문에서는 self-supervised training을 사용한다. Image와 object의 bbox가 들어오면, object의 bbox를 mask로 사용한다. bbox 안의 source image를 reference image로 사용한다. 
+
 $
 X_r = m \circ X_s
 $
+
 이렇게 만들어낸 reference image와 source image를 합성하면, 결과 image는 원래의 source image가 나올 것이다.
+
 $
 \{(\bar{m} \circ x_s, x_r, \bar{m}), x_s\}
 $
+
 $
 \bar{m} = 1 - m
 $
 
 ### Naive solution
 exemplar-based image editing을 위한 단순한 접근 방법은 text condition을 reference image condition으로 대체하여 diffusion model을 사용하는 방법이 있다. 
+
 $
 \mathcal{L} = \mathbb{E}_{t, y_o, \epsilon} \left\| \theta(\hat{y}_t, \bar{m} \circ x_s, c, t) - \epsilon \right\|_2^2
 $
@@ -152,6 +155,7 @@ reference image를 기억하는 것을 방지하기 위해 pre-train 된 Stable 
 이러한 차이를 줄이기 위해 reference image에 여러가지의 data augmentation을 적용한다. (flip, rotation, blur, elastic transform) 
 
 이러한 data augmentation을 $A$라고 표현한다. 결과적으로 아래와 같은 condition이 diffusion model에 들어가게 된다.
+
 $
 c=MLP(CLIP(A(X_r))
 $
@@ -170,6 +174,7 @@ bbox에서부터 만들어진 mask region은 reference image 내의 전체 객�
 
 edited image와 reference image 사이의 similarity degree를 조절하기 위해 제안했다. 
 앞선 연구에서 classifier-free model이 사실상 prior, posterior constraint들이 들어있다는 것을 찾아냈고 논문에서도 이를 사용하였다.
+
 $
 \log p(\hat{y}_t \mid c) + (s - 1) \log p(c \mid \hat{y}_t) \propto \log p(\hat{y}_t) + s (\log p(\hat{y}_t \mid c) - \log p(\hat{y}_t))
 $
