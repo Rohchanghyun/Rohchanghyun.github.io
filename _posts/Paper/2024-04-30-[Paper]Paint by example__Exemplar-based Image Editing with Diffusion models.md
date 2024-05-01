@@ -14,10 +14,12 @@ date: 2024-04-30
 ---
 
 >CVPR 2023
+
 >Binxin yang, Shuyang Gu, Bo Zhang, Ting Zhang, Xuejin Chen, Xiaoyan Sn, Dong Chen, Fang Wen
+
 >University of Science and Technology of China, Microsoft Reasearch Asia
 
-# Abstract
+# **<span style="color: #a6acec">Abstract</span>**
 
 이 논문에서는 Language-guided image editing task를 위한 exemplar-guided image editing을 제안하여 정확한 control을 목표로 한다. 이를 위해 논문에서는 <span style="color: #88c8ff">disentangle을 위한 self-supervised training</span>과 <span style="color: #88c8ff">source image와 exemplar와의 re-organize</span>를 사용한다.
 
@@ -27,7 +29,7 @@ date: 2024-04-30
 
 전체 framework에는 diffusion model의 single forward process만 들어가고 어떠한 iteraive optimization도 들어가 있지 않다.
 
-# Introduction
+# **<span style="color: #a6acec">Introduction</span>**
 
 semantic image editing task는 이전에 있었던 inpainting, composition, colorization과 같은 task 보다는 좀 더 어려운 task다. 
 이전에는 생성 모델의 semantic latent space를 사용하는 방법을 제시했지만, 대부분의 이런 방법들은 특정 image 장르에 국한되어있다.
@@ -47,7 +49,7 @@ semantic image editing task는 이전에 있었던 inpainting, composition, colo
 이러한 문제들을 해결하기 위해 논문에서는 content bottle neck을 사용하여 self-reference condition 시에 spatial token을 버리고 class token만 사용하여 global image embedding을 condition으로써 사용한다. 이를 통해 네트워크가 high-level semantic 정보를 이해하고 source image의 context를 학습할 수 있게 해준다. 
 
 추가로 strong augmentation을 사용하여 self-supervised training 시 생기는 train과 test set 간의 gap을 줄였다.
-# Related works
+# **<span style="color: #a6acec">Related works</span>**
 
 ## Image composition
 
@@ -66,7 +68,7 @@ semantic image editing task는 이전에 있었던 inpainting, composition, colo
 GAN과 text encoder를 사용하여 image를 text에 맞게 최적화 하는 방법을 사용하였었다. 하지만 GAN 기반 방법들은 GAN의 modeling 능력의 한계로 인해 복잡한 장면을 editing하는데 어려움이 있었다.
 
 또한 위에서 말한 것 처럼, text 기반으로 guide해주는 것은 정확한 control이 어렵고, image가 훨씬 더 좋은 표현을 전달할 수 있다고 말한다.
-# Method
+# **<span style="color: #a6acec">Method</span>**
 
 논문의 목표는 reference image를 source image로 현실적으로 합성해주는 exemplar-based image editing이다. 비록 text 기반의 image editing 방법들이 좋은 성능을 보여주었지만, 언어 표현으로 복잡하고 여러가지 idea가 들어있는 image를 표현하기 어렵다. 하지만 image는 text보다 더 많은 정보와 사람의 의도를 정확히 담을 수 있다.
 
@@ -105,9 +107,10 @@ $
 exemplar-based image editing을 위한 단순한 접근 방법은 text condition을 reference image condition으로 대체하여 diffusion model을 사용하는 방법이 있다. 
 $
 \mathcal{L} = \mathbb{E}_{t, y_o, \epsilon} \left\| \theta(\hat{y}_t, \bar{m} \circ x_s, c, t) - \epsilon \right\|_2^2
-
 $
+
 이 때 c(condition)은 text 사용 시 CLIP 모델의 text encoder를 사용하는데, 논문에서는 image를 사용하기 때문에 CLIP 모델의 image embedding을 사용한다. (257개의 token 사용. 256 patch token + 1 class token)
+
 $
 c=CLIP_{all}(X_r)
 $
@@ -123,6 +126,7 @@ $
 ## Model design
 
 <p align="center"><img src="/assets/images/Paper/PaintExample/20240430101813.png"></p>
+
 ### Content Bottleneck
 
 #### Compressed representation
@@ -182,7 +186,7 @@ $
 $
 
 
-# Experiments
+# **<span style="color: #a6acec">Experiments</span>**
 
 ## Implementation Details and Evaluation
 
@@ -261,7 +265,7 @@ DCCF(image harmonization) -> 거의 exemplar image와 같은 결과를 만들어
 - diffusion의 무작위성으로 인해 동일한 입력에서 여러 결과를 낼 수 있다.(figure.9)
 - 생성 이미지가 다양하긴 하지만 객체의 특징은 전부 가지고 있다. 
 
-# Conclusion
+# **<span style="color: #a6acec">Conclusion</span>**
 
 ## <span style="color: #88c8ff">+</span>
 - image 기반으로 condition을 넣어주고, compressed representation을 통해 guide 해줌으로써 경계 아티팩트까지 제거해주었기 때문에 좋은 성능을 보여준다.
