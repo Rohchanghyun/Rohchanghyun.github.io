@@ -18,7 +18,7 @@ date: 2024-04-17
 > Ho Kei Cheng, Seoung Wug Oh, Brian Price, Alexander Schwig, Joon-Young Lee
 > University of Illinois Urbana-Champaign, Adobe Research
 
-# Abstract
+# **<span style="color: #a6acec">Abstract</span>**
 
 video segmentation의 training data는 annotate하는데에 많은 비용이 든다. 이는 새로운 video segmentation에서 end-to-end algorithm으로의 확장을 방해하는 요소다.(annotation이 적다면, 다른 sub-network들을 사용하여 이를 보충해주는 것 같다.)
 
@@ -34,7 +34,7 @@ Benefits
 - task를 포착하기 위해 image-level의 model만 있으면 된다(video-level 필요 없음)
 - 기존의 temporal propagation model도 가져와서 사용할 수 있
 
-# Introduction
+# **<span style="color: #a6acec">Introduction</span>**
 
 기존의 video segmentation에서의 dataset은 적은 class 갯수를 가지고 있다.
 dataset의 class가 다양하더라고, large-vocabulary, open-world에 적용되기에는 어려움이 있다.
@@ -51,13 +51,13 @@ dataset의 class가 다양하더라고, large-vocabulary, open-world에 적용�
 - in-clip consensus를 사용해 image-level의 segmentation을 denoising
 - in-clip consensus와 temporal propagation의 결과를 합친다
 
-# Related work
+# **<span style="color: #a6acec">Related work</span>**
 
 ## decoupled video segmentation
 
 ## Segmenting / Tracking anything
 
-# Method
+# **<span style="color: #a6acec">Method</span>**
 
 ## Decoupled Video Segmentation
 
@@ -69,11 +69,11 @@ dataset의 class가 다양하더라고, large-vocabulary, open-world에 적용�
 ### Notation
 - $t$: time index
 - $I_t$: corresponding frame
-- $M_t$: corresponding final segmentation
-- $M_t=\{m_i,0<i<=|M_t|\}$: set of non-overlapping per-object binary segments
+- $M_t$: corresponding final segmentation  
+- $ M_t=\{m_i,0<i<=|M_t|\} $: set of non-overlapping per-object binary segments
 - $m_i \cap m_j=\emptyset, i \neq j$
-- $Seg(I)$: image segmentation model
-- $Seg(I_t)=Seg_t=\{s_i,0 < i <= |seg_t|\}$: non-overlapping binary segments
+- $Seg(I)$: image segmentation model  
+- $ Seg(I_t)=Seg_t=\{s_i,0 < i <= |seg_t|\} $: non-overlapping binary segments
 - $H$: collection of segmented frames
 - $Prop(H,I)$: segments the query frame with the objects in the memory
 
@@ -98,7 +98,7 @@ propagation model 자체는 새로운 객체를 segment 할 수 없기 때문에
 : 특정 비디오 clip 내에서 여러 frame 또는 data point들 간의 일관된 정보를 얻기 위한 consensus(합의) mechanism.
 clip 내 각 frame에서 관찰되는 객체의 행동이나 상태가 일관되게 처리되게 함으로써 전체 비디오에서 객체의 정확한 동작이나 위치를 더 정확히 segment 할 수 있다.
 
-In-clip consensus 연산은 n개의 작은 future clip의 image segmentation에 대해 수행되고 현재 frame의 denoised consensus $C_t$를 만들어낸다.(online setting에서는 n=1, $C_t=Seg_t$이다)
+In-clip consensus 연산은 n개의 작은 future clip의 image segmentation에 대해 수행되고 현재 frame의 denoised consensus $C_t$를 만들어낸다.(online setting에서는 n=1, $C_t=Seg_t$ 이다)
 
 **Process**
 <span style="color: #88c8ff">spatial alignment</span>
@@ -106,22 +106,28 @@ In-clip consensus 연산은 n개의 작은 future clip의 image segmentation에 
 segmentations: (Segt, Segt+1, ..., Segt+n−1)
 이렇게 가져온 segmentation들은 timestep이 다르기 때문에 misaligned 될 확률이 높다.
 segmentation $Seg_{t+i}$를 t와 align시켜주기 위해 논문에서는 temporal propagation을 사용한다.
+
 $
 \hat{Seg_{t+i}}=Prop(\{I_{t+i},Seg_{t+i},I_t\}),0<i<n
 $
+
 이때 global memory H와는 상호작용하지 않는다.
 
 <span style="color: #88c8ff">representation</span>
 - object proposal을 combined representation으로 병합한다.
 이전에 segmentation을 non-overlapping per-object binary segments로 정의했었다. spatial alignment를 통해 segmentation을 전부 align하면, 각각의 segment들은 frame $I_t$의 object proposal이 된다.
 이런 proposal을 합쳐 P라고 정의한다.
+
 $
 P = \bigcup_{i=0}^{n-1} \hat{Seg_{t+i}} = \{p_i, 0 < i \leq |P|\}.
 $
+
 consensus 결과는 P에 속하는 indicator variable $v^*$를 사용하여 segment들을 $C_t$에 결합시키는 것으로 나타낼 수 있다.
+
 $
 C_t = \{p_i | v_i^* = 1\} = \{c_i, 0 < i \leq |C_t|\}.
 $
+
 중복되는 segment들을 크기별로 내림차순으로 정렬한다.
 아래의 2가지 기준으로 v를 최적화한다.
 - 혼자 있는 proposal들은 아마도 noise일 가능성이 높고, 이들은 버리도록 한다. 선택된 proposal들은 다른 선택되지 않은 proposal들에 의해 support(겹쳐야 한다는걸 의미)되어야 한다.
@@ -129,32 +135,40 @@ $
 
 <span style="color: #88c8ff">integer programming</span>
 - indicator variable이 proposal의 subset을 선택할 수 있도록 최적화한다.
+
 $
 v^* = \underset{v}{\mathrm{argmax}} \sum_i (\text{Supp}_i + \text{Penal}_i) \quad \text{s.t.} \quad \sum_{i,j} \text{Overlap}_{ij} = 0
 $
+
 s.t.는 proposal이 겹치지 않는다는 조건을 의미한다.
 
 i번째 proposal은 IOU가 0.5보다 클 때 j번째 proposal을 support한다.
 IOU가 높을수록 support 가 강하고, segment가 많은 support를 받을수록 선택될 가능성이 높아진다.
 선택된 segment의 support를 최대화 하기 위해 다음의 objective를 모든 i에 대해 최대화한다.
+
 $
 \text{Supp}_i = v_i \sum_j \begin{cases}
 \text{IoU}_{ij}, & \text{if } \text{IoU}_{ij} > 0.5 \text{ and } i \neq j \\
 0, & \text{otherwise}
 \end{cases}
 $
+
 또한 서로를 support 하는 proposal들은 overlap되므로 같이 선택되면 안된다. 이는 다음을 항상 0으로 제한함으로써 구현할 수 있다.
+
 $
 \text{Overlap}_{ij} = \begin{cases}
 v_i \cdot v_j, & \text{if } \text{IoU}_{ij} > 0.5 \text{ and } i \neq j \\
 0, & \text{otherwise}
 \end{cases}
 $
+
 마지막으로 segment가 support가 하나도 없거나, noise가 있는 segment를 없애기 위해 penalty를 준다.
+
 $
 Penal_i=-\alpha v_i
 $
-$\alpha = 0.5$로 설정한다. 첫 번째 frame에 대해, $C_t$를 propagated segmentat ion Prop(H,$I_t$)과 병합하여 final output $M_t$를 생성한다.
+
+$\alpha = 0.5$ 로 설정한다. 첫 번째 frame에 대해, $C_t$를 propagated segmentat ion Prop(H,$I_t$)과 병합하여 final output $M_t$를 생성한다.
 
 ### Merging Propagation and Consensus
 
@@ -164,6 +178,7 @@ $C_t$와 Prop(H,$I_t$)를 병합한다. 이때 두 segmentation에서 segment들
 $
 M_t = \{ r_i \cup c_j | a_{ij} = 1 \} \cup \{ r_i | \bigvee_j a_{ij} = 0 \} \cup \{ c_j | \bigvee_i a_{ij} = 0 \}
 $
+
 ### Maximizing Association IoU
 
 $
@@ -172,6 +187,7 @@ e_{ij} = \begin{cases}
 -1, & \text{otherwise}
 \end{cases}
 $
+
 연관된 쌍의 IoU를 최대화함으로써 $a_{ij}$를 찾는다. 
 e가 0보다 클 경우 $a_{ij}$를 1로 설정.
 
